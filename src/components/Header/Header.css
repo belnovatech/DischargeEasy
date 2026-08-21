@@ -88,6 +88,10 @@
    LOGO
    ========================================================= */
 
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .logo {
   flex-shrink: 0;
 
@@ -99,13 +103,13 @@
   font-family: 'Poppins', sans-serif;
   font-size: 26px;
   line-height: 1;
-
   font-weight: 800;
   letter-spacing: -1.1px;
 
   position: relative;
-
   padding-right: 4px;
+
+  color: inherit !important;
 
   transition:
     transform 0.25s ease,
@@ -117,16 +121,53 @@
   filter: brightness(1.04);
 }
 
-.logo-discharge {
+/* DISCHARGE - BLUE */
+.logo .logo-discharge {
   color: #0751a8 !important;
+
+  -webkit-text-fill-color: #0751a8 !important;
+  background: none !important;
+  background-image: none !important;
+
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
 }
 
-.logo-easy {
+/* EASY - TEAL */
+.logo .logo-easy {
   color: #27b7b2 !important;
+
+  -webkit-text-fill-color: #27b7b2 !important;
+  background: none !important;
+  background-image: none !important;
+
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
 }
 
-.logo-easy {
-  color: var(--teal);
+/* Small healthcare dot */
+.logo::after {
+  content: '';
+
+  position: absolute;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #27b7b2;
+
+  right: -3px;
+  top: 3px;
+
+  opacity: 0.75;
+
+  box-shadow:
+    0 0 0 4px rgba(39, 183, 178, 0.08),
+    0 0 12px rgba(39, 183, 178, 0.22);
+
+  animation: medicalPulse 2.8s ease-in-out infinite;
 }
 
 
