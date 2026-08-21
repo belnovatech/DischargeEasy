@@ -118,7 +118,11 @@
 }
 
 .logo-discharge {
-  color: var(--primary-blue);
+  color: #0751a8 !important;
+}
+
+.logo-easy {
+  color: #27b7b2 !important;
 }
 
 .logo-easy {

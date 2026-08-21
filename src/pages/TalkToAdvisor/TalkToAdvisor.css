@@ -1,0 +1,539 @@
+/* =========================================================
+   TALK TO AN ADVISOR
+   ========================================================= */
+
+.advisor-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #173b61;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.advisor-hero {
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(72, 210, 204, 0.20),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5fbfd 0%,
+      #eafafa 100%
+    );
+}
+
+.advisor-hero-inner {
+  width: 100%;
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  padding: 70px 35px 72px;
+
+  box-sizing: border-box;
+}
+
+.advisor-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 27px;
+
+  padding: 0 14px;
+
+  border: 1px solid #9ddfdf;
+
+  border-radius: 15px;
+
+  color: #07508d;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+.advisor-hero h1 {
+  margin: 22px 0 14px;
+
+  color: #173957;
+
+  font-size: 42px;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.3px;
+
+  font-weight: 750;
+}
+
+.advisor-hero p {
+  max-width: 510px;
+
+  margin: 0;
+
+  color: #63819a;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+
+.advisor-form-section {
+  width: 100%;
+
+  padding: 80px 20px 55px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.advisor-form-card {
+  width: 100%;
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d8e4ed;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(20, 68, 105, 0.07);
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.advisor-form {
+  width: 100%;
+}
+
+.advisor-form-row {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 14px;
+
+  margin-bottom: 13px;
+}
+
+.advisor-field {
+  width: 100%;
+}
+
+.advisor-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #46657d;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+.advisor-field input,
+.advisor-field select {
+  width: 100%;
+
+  height: 35px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6e2eb;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #173e60;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.advisor-field input:focus,
+.advisor-field select:focus {
+  border-color: #27b8be;
+
+  box-shadow:
+    0 0 0 3px rgba(39, 184, 190, 0.1);
+}
+
+.advisor-field select {
+  cursor: pointer;
+}
+
+.advisor-requirement {
+  margin-bottom: 17px;
+}
+
+/* =========================================================
+   CONSENT
+   ========================================================= */
+
+.advisor-consent {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: #71889b;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+
+  cursor: pointer;
+}
+
+.advisor-consent input {
+  width: 13px;
+  height: 13px;
+
+  margin: 0;
+
+  flex-shrink: 0;
+
+  accent-color: #0c5a9d;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.advisor-error {
+  margin-top: 12px;
+
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  background: #fff1f1;
+
+  color: #c33c3c;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.advisor-submit {
+  width: 100%;
+
+  height: 42px;
+
+  margin-top: 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 0;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    90deg,
+    #073e83 0%,
+    #0b79a5 45%,
+    #18b8bd 100%
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.advisor-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(5, 80, 130, 0.18);
+}
+
+.advisor-submit:disabled {
+  opacity: 0.7;
+
+  cursor: wait;
+}
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.advisor-success {
+  min-height: 280px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.advisor-success-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: #e6f8f7;
+
+  color: #0ca5ac;
+}
+
+.advisor-success h2 {
+  margin: 0 0 10px;
+
+  color: #153d61;
+
+  font-size: 21px;
+}
+
+.advisor-success p {
+  max-width: 350px;
+
+  margin: 0 0 22px;
+
+  color: #71899d;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.advisor-success-button {
+  min-height: 38px;
+
+  padding: 0 20px;
+
+  border: 0;
+
+  border-radius: 20px;
+
+  background: #0b4d92;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.advisor-disclaimer {
+  max-width: 720px;
+
+  margin: 25px auto 0;
+
+  color: #718ba1;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .advisor-hero-inner {
+    padding: 65px 30px 60px;
+  }
+
+  .advisor-hero h1 {
+    font-size: 40px;
+  }
+
+  .advisor-form-section {
+    padding-top: 65px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .advisor-hero-inner {
+    padding: 55px 20px 50px;
+  }
+
+  .advisor-badge {
+    height: 25px;
+
+    padding: 0 12px;
+
+    font-size: 7px;
+  }
+
+  .advisor-hero h1 {
+    margin-top: 20px;
+
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .advisor-hero p {
+    font-size: 12px;
+  }
+
+  .advisor-form-section {
+    padding: 45px 14px 50px;
+  }
+
+  .advisor-form-card {
+    padding: 20px;
+
+    border-radius: 19px;
+  }
+
+  .advisor-form-row {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    margin-bottom: 13px;
+  }
+
+  .advisor-field label {
+    font-size: 7px;
+  }
+
+  .advisor-field input,
+  .advisor-field select {
+    height: 39px;
+
+    font-size: 12px;
+  }
+
+  .advisor-consent {
+    font-size: 9px;
+  }
+
+  .advisor-submit {
+    height: 42px;
+
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .advisor-hero h1 {
+    font-size: 30px;
+  }
+
+  .advisor-form-card {
+    padding: 16px;
+  }
+
+  .advisor-hero p {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .advisor-submit {
+    transition: none;
+  }
+}

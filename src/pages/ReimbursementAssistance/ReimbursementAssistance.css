@@ -1,0 +1,1056 @@
+/* =========================================================
+   REIMBURSEMENT ASSISTANCE PAGE
+   ========================================================= */
+
+.reimbursement-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #173b61;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.reimbursement-hero {
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(72, 210, 204, 0.20),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5fbfd 0%,
+      #eefbfb 100%
+    );
+
+  min-height: 575px;
+
+  display: flex;
+  align-items: center;
+}
+
+.reimbursement-hero-inner {
+  width: 100%;
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  padding: 95px 35px 85px;
+
+  box-sizing: border-box;
+}
+
+.reimbursement-badge {
+  display: inline-flex;
+  align-items: center;
+
+  height: 40px;
+
+  padding: 0 22px;
+
+  border: 1px solid #9adfdf;
+
+  border-radius: 22px;
+
+  color: #06478b;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.reimbursement-hero h1 {
+  max-width: 980px;
+
+  margin: 35px 0 30px;
+
+  color: #173957;
+
+  font-size: clamp(
+    48px,
+    5vw,
+    72px
+  );
+
+  line-height: 1.08;
+
+  letter-spacing: -2.4px;
+
+  font-weight: 750;
+}
+
+.reimbursement-hero p {
+  max-width: 880px;
+
+  margin: 0;
+
+  color: #557997;
+
+  font-size: 22px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.reimbursement-section-heading {
+  text-align: center;
+}
+
+.section-eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #084a8e;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.reimbursement-section-heading h2 {
+  margin: 0;
+
+  color: #153c61;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+
+  font-weight: 750;
+}
+
+/* =========================================================
+   PROCESS SECTION
+   ========================================================= */
+
+.reimbursement-process {
+  width: 100%;
+
+  padding: 80px 25px 75px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.process-timeline {
+  position: relative;
+
+  width: 100%;
+  max-width: 920px;
+
+  margin: 45px auto 0;
+}
+
+.timeline-line {
+  position: absolute;
+
+  top: 20px;
+  bottom: 20px;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #d4e3ef 8%,
+    #d4e3ef 92%,
+    transparent
+  );
+}
+
+.process-row {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 50px 1fr;
+
+  align-items: center;
+
+  min-height: 76px;
+}
+
+.process-card {
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #d8e4ee;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  color: #17456d;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  box-shadow:
+    0 8px 18px rgba(20, 68, 105, 0.06);
+
+  box-sizing: border-box;
+}
+
+.process-row.left .process-card {
+  justify-content: flex-end;
+
+  text-align: right;
+
+  margin-right: 10px;
+}
+
+.process-row.right .process-card {
+  justify-content: flex-start;
+
+  text-align: left;
+
+  margin-left: 10px;
+}
+
+.process-card-icon {
+  display: none;
+
+  flex-shrink: 0;
+
+  color: #0d73a4;
+}
+
+.process-number {
+  position: relative;
+
+  z-index: 2;
+
+  width: 24px;
+  height: 24px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b4e95;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 0 0 5px #ffffff;
+}
+
+.process-empty {
+  min-width: 0;
+}
+
+/* =========================================================
+   PROCESS DISCLAIMER
+   ========================================================= */
+
+.process-disclaimer {
+  width: 100%;
+  max-width: 505px;
+
+  margin: 34px auto 0;
+
+  padding: 17px 24px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #9fe1df;
+
+  border-radius: 22px;
+
+  background: #e8fafa;
+
+  color: #194d6c;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================================
+   FORM SECTION
+   ========================================================= */
+
+.reimbursement-form-section {
+  width: 100%;
+
+  padding: 68px 20px 70px;
+
+  background: #f1f9fe;
+
+  box-sizing: border-box;
+}
+
+.form-heading {
+  margin-bottom: 35px;
+}
+
+.form-heading h2 {
+  font-size: 34px;
+}
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.reimbursement-form-card {
+  width: 100%;
+  max-width: 565px;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d9e5ed;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(17, 61, 91, 0.08);
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.reimbursement-form {
+  width: 100%;
+}
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-bottom: 13px;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-field label {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #46657d;
+
+  font-size: 8px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d6e2eb;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #173e60;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-field input {
+  height: 35px;
+
+  padding: 0 15px;
+}
+
+.form-field textarea {
+  min-height: 78px;
+
+  padding: 12px 15px;
+
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #27b8be;
+
+  box-shadow:
+    0 0 0 3px rgba(39, 184, 190, 0.10);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #a6b8c6;
+}
+
+.bill-field {
+  margin-top: 3px;
+
+  margin-bottom: 13px;
+
+  max-width: calc(50% - 7px);
+}
+
+.message-field {
+  margin-bottom: 17px;
+}
+
+/* =========================================================
+   DATE INPUT
+   ========================================================= */
+
+.form-field input[type='date'] {
+  color: #173e60;
+}
+
+.form-field input[type='date']:invalid {
+  color: #8ca0ae;
+}
+
+/* =========================================================
+   CONSENT
+   ========================================================= */
+
+.consent-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+  color: #71889b;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+}
+
+.consent-row input {
+  width: 13px;
+  height: 13px;
+
+  margin: 0;
+
+  flex-shrink: 0;
+
+  accent-color: #0c5a9d;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.form-error {
+  margin-top: 13px;
+
+  padding: 9px 12px;
+
+  border-radius: 10px;
+
+  background: #fff1f1;
+
+  color: #c33c3c;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.reimbursement-submit {
+  width: 100%;
+
+  height: 42px;
+
+  margin-top: 16px;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 0;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    90deg,
+    #073e83 0%,
+    #0b79a5 45%,
+    #18b8bd 100%
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.reimbursement-submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(5, 80, 130, 0.18);
+}
+
+.reimbursement-submit:disabled {
+  cursor: wait;
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   SUCCESS STATE
+   ========================================================= */
+
+.form-success {
+  min-height: 350px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 25px;
+}
+
+.success-icon {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  background: #e6f8f7;
+
+  color: #0ca5ac;
+}
+
+.form-success h3 {
+  margin: 0 0 12px;
+
+  color: #153d61;
+
+  font-size: 24px;
+}
+
+.form-success p {
+  max-width: 390px;
+
+  margin: 0 0 25px;
+
+  color: #668097;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.success-button {
+  min-height: 40px;
+
+  padding: 0 22px;
+
+  border: 0;
+
+  border-radius: 22px;
+
+  background: #0b4d92;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   FORM DISCLAIMER
+   ========================================================= */
+
+.form-disclaimer {
+  max-width: 720px;
+
+  margin: 26px auto 0;
+
+  color: #718ba1;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+/* =========================================================
+   1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .reimbursement-hero-inner {
+    max-width: 1000px;
+  }
+
+  .reimbursement-hero h1 {
+    font-size: 58px;
+  }
+
+  .reimbursement-hero p {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+   900px TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .reimbursement-hero {
+    min-height: auto;
+  }
+
+  .reimbursement-hero-inner {
+    padding: 80px 30px 75px;
+  }
+
+  .reimbursement-hero h1 {
+    font-size: 50px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .reimbursement-hero p {
+    max-width: 700px;
+
+    font-size: 18px;
+  }
+
+  .reimbursement-process {
+    padding-top: 65px;
+  }
+
+  .process-timeline {
+    max-width: 760px;
+  }
+}
+
+/* =========================================================
+   700px TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .reimbursement-hero-inner {
+    padding: 65px 22px 60px;
+  }
+
+  .reimbursement-badge {
+    height: 36px;
+
+    padding: 0 16px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .reimbursement-hero h1 {
+    margin-top: 25px;
+    margin-bottom: 22px;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.2px;
+  }
+
+  .reimbursement-hero p {
+    font-size: 17px;
+
+    line-height: 1.65;
+  }
+
+  .reimbursement-process {
+    padding: 58px 18px 60px;
+  }
+
+  .reimbursement-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .process-timeline {
+    margin-top: 35px;
+  }
+
+  .process-row {
+    grid-template-columns: 38px 1fr;
+
+    min-height: auto;
+
+    margin-bottom: 14px;
+  }
+
+  .timeline-line {
+    top: 10px;
+    bottom: 10px;
+
+    left: 19px;
+
+    transform: none;
+  }
+
+  .process-number {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 24px;
+    height: 24px;
+
+    margin: 0 auto;
+
+    box-shadow:
+      0 0 0 4px #ffffff;
+  }
+
+  .process-card {
+    grid-column: 2;
+    grid-row: 1;
+
+    min-height: 44px;
+
+    margin: 0 !important;
+
+    padding: 10px 16px;
+
+    justify-content: flex-start !important;
+
+    text-align: left !important;
+
+    font-size: 12px;
+  }
+
+  .process-empty {
+    display: none;
+  }
+
+  .process-card-icon {
+    display: block;
+
+    margin-left: auto;
+  }
+
+  .process-disclaimer {
+    margin-top: 30px;
+
+    font-size: 10px;
+  }
+
+  .reimbursement-form-section {
+    padding: 55px 16px 60px;
+  }
+
+  .form-heading {
+    margin-bottom: 28px;
+  }
+
+  .form-heading h2 {
+    font-size: 29px;
+
+    line-height: 1.25;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .reimbursement-form-card {
+    padding: 21px;
+
+    border-radius: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+
+    margin-bottom: 13px;
+  }
+
+  .bill-field {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   500px MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .reimbursement-hero-inner {
+    padding: 55px 18px 50px;
+  }
+
+  .reimbursement-badge {
+    font-size: 9px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .reimbursement-hero h1 {
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .reimbursement-hero p {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+  .reimbursement-process {
+    padding: 48px 15px 50px;
+  }
+
+  .section-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .reimbursement-section-heading h2 {
+    font-size: 25px;
+  }
+
+  .process-timeline {
+    margin-top: 30px;
+  }
+
+  .process-row {
+    grid-template-columns: 32px 1fr;
+
+    margin-bottom: 11px;
+  }
+
+  .timeline-line {
+    left: 16px;
+  }
+
+  .process-number {
+    width: 22px;
+    height: 22px;
+
+    font-size: 9px;
+  }
+
+  .process-card {
+    min-height: 42px;
+
+    padding: 9px 13px;
+
+    border-radius: 18px;
+
+    font-size: 11px;
+  }
+
+  .process-disclaimer {
+    padding: 14px 16px;
+
+    border-radius: 18px;
+
+    font-size: 9px;
+  }
+
+  .reimbursement-form-section {
+    padding: 48px 13px 50px;
+  }
+
+  .form-heading h2 {
+    font-size: 25px;
+  }
+
+  .reimbursement-form-card {
+    padding: 17px;
+
+    border-radius: 18px;
+  }
+
+  .form-field label {
+    font-size: 7px;
+  }
+
+  .form-field input {
+    height: 38px;
+
+    font-size: 12px;
+  }
+
+  .form-field textarea {
+    min-height: 85px;
+
+    font-size: 12px;
+  }
+
+  .consent-row {
+    font-size: 9px;
+  }
+
+  .reimbursement-submit {
+    height: 42px;
+
+    font-size: 11px;
+  }
+
+  .form-disclaimer {
+    padding: 0 10px;
+
+    font-size: 8px;
+  }
+
+  .form-success {
+    min-height: 300px;
+  }
+
+  .form-success h3 {
+    font-size: 20px;
+  }
+}
+
+/* =========================================================
+   380px SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .reimbursement-hero h1 {
+    font-size: 30px;
+  }
+
+  .reimbursement-hero p {
+    font-size: 14px;
+  }
+
+  .reimbursement-section-heading h2 {
+    font-size: 23px;
+  }
+
+  .form-heading h2 {
+    font-size: 23px;
+  }
+
+  .reimbursement-form-card {
+    padding: 14px;
+  }
+
+  .process-card {
+    font-size: 10px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .form-field input,
+  .form-field textarea,
+  .reimbursement-submit {
+    transition: none;
+  }
+}
