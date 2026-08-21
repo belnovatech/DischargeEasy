@@ -1,0 +1,115 @@
+/* Responsive Design Rules */
+
+@media (max-width: 1200px) {
+  :root {
+    --container-width: 960px;
+  }
+  
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --container-width: 720px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  /* Split layout stacking */
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-width: 540px;
+  }
+
+  section {
+    padding: 50px 0;
+  }
+
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  h1 {
+    font-size: 32px !important;
+  }
+
+  h2 {
+    font-size: 26px !important;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --container-width: 100%;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+}

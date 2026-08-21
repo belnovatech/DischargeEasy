@@ -1,0 +1,1339 @@
+/* ============================================================
+   DISCHARGEEASY - WHY US PAGE
+   Fully isolated styles
+============================================================ */
+
+.de-why-page {
+  --de-why-blue: #0d4e9d;
+  --de-why-blue-dark: #083f82;
+  --de-why-teal: #27b7b3;
+  --de-why-text: #123f69;
+  --de-why-muted: #70859a;
+  --de-why-border: #dce8ef;
+  --de-why-soft: #e8f8f8;
+  --de-why-bg: #f5fbfd;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  color: var(--de-why-text);
+
+  background: #ffffff;
+}
+
+.de-why-page *,
+.de-why-page *::before,
+.de-why-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.de-why-container {
+  width: min(1160px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.de-why-hero {
+  position: relative;
+
+  min-height: 610px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 100px 0 120px;
+
+  background:
+    radial-gradient(
+      circle at 82% 25%,
+      rgba(39, 183, 179, 0.10),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #eefafd 0%,
+      #ffffff 72%
+    );
+}
+
+.de-why-hero-content {
+  width: 680px;
+}
+
+.de-why-eyebrow,
+.de-why-small-label {
+  display: inline-flex;
+
+  color: var(--de-why-blue);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 2.2px;
+
+  text-transform: uppercase;
+}
+
+.de-why-eyebrow {
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: var(--de-why-soft);
+}
+
+.de-why-hero h1 {
+  margin: 24px 0 22px;
+
+  color: var(--de-why-blue);
+
+  font-size: clamp(48px, 5.2vw, 68px);
+
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -2.4px;
+}
+
+.de-why-hero h1 span {
+  color: var(--de-why-teal);
+}
+
+.de-why-hero-content > p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: var(--de-why-muted);
+
+  font-size: 18px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   HERO HIGHLIGHTS
+============================================================ */
+
+.de-why-hero-highlights {
+  display: flex;
+
+  gap: 0;
+
+  margin-top: 34px;
+}
+
+.de-why-hero-highlights div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding: 0 24px;
+
+  border-right: 1px solid var(--de-why-border);
+}
+
+.de-why-hero-highlights div:first-child {
+  padding-left: 0;
+}
+
+.de-why-hero-highlights div:last-child {
+  border-right: 0;
+}
+
+.de-why-hero-highlights strong {
+  color: var(--de-why-blue);
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+.de-why-hero-highlights span {
+  color: var(--de-why-muted);
+
+  font-size: 11px;
+}
+
+
+/* ============================================================
+   HERO DECORATION
+============================================================ */
+
+.de-why-hero-orb {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.de-why-orb-one {
+  width: 460px;
+  height: 460px;
+
+  right: 5%;
+  top: 65px;
+
+  border: 1px solid rgba(13, 78, 157, 0.07);
+}
+
+.de-why-orb-two {
+  width: 320px;
+  height: 320px;
+
+  right: 15%;
+  top: 135px;
+
+  border: 1px solid rgba(39, 183, 179, 0.10);
+}
+
+.de-why-hero-wave {
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: 80px;
+
+  pointer-events: none;
+}
+
+.de-why-hero-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.de-why-hero-wave path {
+  fill: none;
+
+  stroke: #d8e6ef;
+
+  stroke-width: 2;
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.de-why-intro {
+  padding: 105px 0 90px;
+
+  background: #ffffff;
+}
+
+.de-why-intro-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.de-why-intro h2 {
+  margin: 18px 0 0;
+
+  color: var(--de-why-blue);
+
+  font-size: clamp(40px, 4vw, 53px);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+.de-why-intro h2 span {
+  color: var(--de-why-teal);
+}
+
+.de-why-intro-text p {
+  margin: 0 0 18px;
+
+  color: var(--de-why-muted);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.de-why-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+============================================================ */
+
+.de-why-section-heading {
+  max-width: 720px;
+
+  margin: 0 auto 62px;
+
+  text-align: center;
+}
+
+.de-why-section-heading h2 {
+  margin: 17px 0;
+
+  color: var(--de-why-blue);
+
+  font-size: clamp(40px, 4vw, 53px);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+.de-why-section-heading h2 span {
+  color: var(--de-why-teal);
+}
+
+.de-why-section-heading p {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: var(--de-why-muted);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   ADVANTAGES
+============================================================ */
+
+.de-why-advantages {
+  padding: 105px 0 115px;
+
+  background: var(--de-why-bg);
+}
+
+.de-why-advantages-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.de-why-advantage-card {
+  min-height: 245px;
+
+  padding: 27px 25px;
+
+  border: 1px solid var(--de-why-border);
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(33, 79, 111, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.de-why-advantage-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 35px rgba(33, 79, 111, 0.10);
+}
+
+.de-why-advantage-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.de-why-number {
+  color: #a3b7c5;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.de-why-mini-check {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--de-why-soft);
+
+  color: var(--de-why-teal);
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.de-why-advantage-card h3 {
+  margin: 0 0 11px;
+
+  color: var(--de-why-blue);
+
+  font-size: 19px;
+
+  font-weight: 750;
+}
+
+.de-why-advantage-card p {
+  margin: 0;
+
+  color: var(--de-why-muted);
+
+  font-size: 13.5px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   COMPARISON
+============================================================ */
+
+.de-why-comparison {
+  padding: 110px 0 120px;
+
+  background: #ffffff;
+}
+
+.de-why-comparison-card {
+  overflow: hidden;
+
+  border: 1px solid var(--de-why-border);
+
+  border-radius: 27px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(33, 79, 111, 0.07);
+}
+
+.de-why-comparison-header,
+.de-why-comparison-row {
+  display: grid;
+
+  grid-template-columns: 1.1fr 1fr 1fr;
+}
+
+.de-why-comparison-header {
+  min-height: 62px;
+
+  align-items: center;
+
+  background: var(--de-why-blue);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 750;
+}
+
+.de-why-comparison-header > div,
+.de-why-comparison-row > div {
+  padding: 17px 25px;
+}
+
+.de-why-comparison-row {
+  min-height: 66px;
+
+  align-items: center;
+
+  border-bottom: 1px solid var(--de-why-border);
+
+  font-size: 13px;
+}
+
+.de-why-comparison-row:last-child {
+  border-bottom: 0;
+}
+
+.de-why-comparison-area {
+  color: var(--de-why-blue);
+
+  font-weight: 700;
+}
+
+.de-why-traditional {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--de-why-muted);
+}
+
+.de-why-traditional span {
+  color: #a8bac7;
+}
+
+.de-why-easy {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--de-why-blue);
+
+  font-weight: 650;
+}
+
+.de-why-easy span {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--de-why-soft);
+
+  color: var(--de-why-teal);
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   STATS
+============================================================ */
+
+.de-why-stats {
+  padding: 60px 0;
+
+  background: var(--de-why-bg);
+}
+
+.de-why-stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 0;
+
+  border: 1px solid var(--de-why-border);
+
+  border-radius: 25px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.de-why-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 28px;
+
+  border-right: 1px solid var(--de-why-border);
+
+  text-align: center;
+}
+
+.de-why-stat:last-child {
+  border-right: 0;
+}
+
+.de-why-stat strong {
+  color: var(--de-why-teal);
+
+  font-size: 27px;
+
+  font-weight: 800;
+}
+
+.de-why-stat span {
+  color: var(--de-why-muted);
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+
+/* ============================================================
+   TESTIMONIALS
+============================================================ */
+
+.de-why-testimonials {
+  padding: 105px 0 115px;
+
+  background: #ffffff;
+}
+
+.de-why-testimonial-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.de-why-testimonial-card {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 28px 25px;
+
+  border: 1px solid var(--de-why-border);
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f8fcfd
+    );
+
+  box-shadow:
+    0 10px 25px rgba(33, 79, 111, 0.05);
+}
+
+.de-why-quote-mark {
+  position: absolute;
+
+  top: 13px;
+  right: 22px;
+
+  color: #d7eeee;
+
+  font-family: Georgia, serif;
+
+  font-size: 70px;
+
+  line-height: 1;
+}
+
+.de-why-stars {
+  margin-bottom: 20px;
+
+  color: #27b7b3;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+.de-why-testimonial-card > p {
+  min-height: 125px;
+
+  margin: 0;
+
+  color: var(--de-why-muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.de-why-testimonial-person {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 25px;
+
+  padding-top: 19px;
+
+  border-top: 1px solid var(--de-why-border);
+}
+
+.de-why-avatar {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--de-why-soft);
+
+  color: var(--de-why-blue);
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.de-why-testimonial-person div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.de-why-testimonial-person strong {
+  color: var(--de-why-blue);
+
+  font-size: 13px;
+}
+
+.de-why-testimonial-person span {
+  color: var(--de-why-muted);
+
+  font-size: 10px;
+}
+
+
+/* ============================================================
+   FINAL CTA
+============================================================ */
+
+.de-why-final {
+  position: relative;
+
+  padding: 105px 0 100px;
+
+  background: #ffffff;
+}
+
+.de-why-final-wave {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 75px;
+}
+
+.de-why-final-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.de-why-final-wave path {
+  fill: none;
+
+  stroke: #d8e6ef;
+
+  stroke-width: 2;
+}
+
+.de-why-final-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 35px;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #0d4e9d,
+      #0879a4 52%,
+      #27b7b3
+    );
+
+  color: #ffffff;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 45px rgba(13, 78, 157, 0.18);
+}
+
+.de-why-final-card > span {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.de-why-final-card h2 {
+  margin: 17px 0;
+
+  font-size: clamp(38px, 4vw, 53px);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+}
+
+.de-why-final-card h2 strong {
+  color: #baf3f0;
+}
+
+.de-why-final-card p {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  color: rgba(255,255,255,0.87);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+.de-why-final-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  min-height: 53px;
+
+  margin-top: 28px;
+
+  padding: 0 29px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: var(--de-why-blue);
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.de-why-final-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(0,0,0,0.15);
+}
+
+.de-why-final-button span {
+  font-size: 19px;
+}
+
+
+/* ============================================================
+   LARGE TABLET
+============================================================ */
+
+@media (max-width: 1100px) {
+
+  .de-why-container {
+    width: min(920px, calc(100% - 60px));
+  }
+
+  .de-why-hero-content {
+    width: 600px;
+  }
+
+  .de-why-hero h1 {
+    font-size: 57px;
+  }
+
+  .de-why-intro-grid {
+    gap: 55px;
+  }
+
+  .de-why-advantages-grid {
+    gap: 15px;
+  }
+
+  .de-why-advantage-card {
+    padding: 24px 20px;
+  }
+
+  .de-why-testimonial-grid {
+    gap: 15px;
+  }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 850px) {
+
+  .de-why-container {
+    width: min(700px, calc(100% - 48px));
+  }
+
+
+  /* HERO */
+
+  .de-why-hero {
+    min-height: 540px;
+
+    padding: 85px 0 100px;
+  }
+
+  .de-why-hero-content {
+    width: 100%;
+  }
+
+  .de-why-hero h1 {
+    font-size: 51px;
+  }
+
+
+  /* INTRO */
+
+  .de-why-intro {
+    padding: 80px 0;
+  }
+
+  .de-why-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+
+  /* ADVANTAGES */
+
+  .de-why-advantages {
+    padding: 85px 0;
+  }
+
+  .de-why-advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* COMPARISON */
+
+  .de-why-comparison {
+    padding: 85px 0;
+  }
+
+
+  /* STATS */
+
+  .de-why-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .de-why-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .de-why-stat:nth-child(-n+2) {
+    border-bottom: 1px solid var(--de-why-border);
+  }
+
+
+  /* TESTIMONIALS */
+
+  .de-why-testimonials {
+    padding: 85px 0;
+  }
+
+  .de-why-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .de-why-testimonial-card {
+    min-height: auto;
+  }
+
+  .de-why-testimonial-card > p {
+    min-height: auto;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+  .de-why-container {
+    width: calc(100% - 32px);
+  }
+
+
+  /* HERO */
+
+  .de-why-hero {
+    min-height: auto;
+
+    padding: 70px 0 85px;
+  }
+
+  .de-why-eyebrow {
+    padding: 9px 15px;
+
+    font-size: 9px;
+  }
+
+  .de-why-hero h1 {
+    margin: 20px 0 18px;
+
+    font-size: 38px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.1px;
+  }
+
+  .de-why-hero-content > p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .de-why-hero-highlights {
+    margin-top: 28px;
+  }
+
+  .de-why-hero-highlights div {
+    padding: 0 14px;
+  }
+
+  .de-why-hero-highlights div:first-child {
+    padding-left: 0;
+  }
+
+  .de-why-hero-highlights strong {
+    font-size: 13px;
+  }
+
+  .de-why-hero-highlights span {
+    font-size: 9px;
+  }
+
+  .de-why-hero-wave {
+    height: 55px;
+  }
+
+  .de-why-orb-one {
+    width: 300px;
+    height: 300px;
+
+    right: -140px;
+    top: 60px;
+  }
+
+  .de-why-orb-two {
+    display: none;
+  }
+
+
+  /* INTRO */
+
+  .de-why-intro {
+    padding: 67px 0 60px;
+  }
+
+  .de-why-intro h2 {
+    font-size: 34px;
+  }
+
+  .de-why-intro-text p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .de-why-section-heading {
+    margin-bottom: 42px;
+  }
+
+  .de-why-section-heading h2 {
+    font-size: 34px;
+
+    line-height: 1.1;
+  }
+
+  .de-why-section-heading p {
+    font-size: 14px;
+  }
+
+
+  /* ADVANTAGES */
+
+  .de-why-advantages {
+    padding: 70px 0;
+  }
+
+  .de-why-advantages-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .de-why-advantage-card {
+    min-height: auto;
+
+    padding: 23px 20px;
+
+    border-radius: 20px;
+  }
+
+  .de-why-advantage-card h3 {
+    font-size: 18px;
+  }
+
+  .de-why-advantage-card p {
+    font-size: 13px;
+  }
+
+
+  /* COMPARISON */
+
+  .de-why-comparison {
+    padding: 70px 0;
+  }
+
+  .de-why-comparison-card {
+    border-radius: 20px;
+  }
+
+  .de-why-comparison-header,
+  .de-why-comparison-row {
+    grid-template-columns: 0.85fr 0.95fr 1fr;
+  }
+
+  .de-why-comparison-header {
+    min-height: 55px;
+
+    font-size: 9px;
+  }
+
+  .de-why-comparison-header > div,
+  .de-why-comparison-row > div {
+    padding: 13px 10px;
+  }
+
+  .de-why-comparison-row {
+    min-height: 62px;
+
+    font-size: 10.5px;
+  }
+
+  .de-why-easy span {
+    width: 18px;
+    height: 18px;
+
+    font-size: 8px;
+  }
+
+
+  /* STATS */
+
+  .de-why-stats {
+    padding: 45px 0;
+  }
+
+  .de-why-stats-grid {
+    border-radius: 20px;
+  }
+
+  .de-why-stat {
+    padding: 22px 10px;
+  }
+
+  .de-why-stat strong {
+    font-size: 23px;
+  }
+
+  .de-why-stat span {
+    font-size: 9px;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .de-why-testimonials {
+    padding: 70px 0;
+  }
+
+  .de-why-testimonial-grid {
+    gap: 14px;
+  }
+
+  .de-why-testimonial-card {
+    padding: 24px 20px;
+
+    border-radius: 21px;
+  }
+
+  .de-why-testimonial-card > p {
+    font-size: 13px;
+  }
+
+
+  /* FINAL */
+
+  .de-why-final {
+    padding: 70px 0 60px;
+  }
+
+  .de-why-final-card {
+    padding: 48px 20px;
+
+    border-radius: 27px;
+  }
+
+  .de-why-final-card h2 {
+    font-size: 34px;
+  }
+
+  .de-why-final-card p {
+    font-size: 14px;
+  }
+
+  .de-why-final-button {
+    width: 100%;
+
+    min-height: 51px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 380px) {
+
+  .de-why-container {
+    width: calc(100% - 24px);
+  }
+
+  .de-why-hero h1 {
+    font-size: 34px;
+  }
+
+  .de-why-intro h2,
+  .de-why-section-heading h2 {
+    font-size: 30px;
+  }
+
+  .de-why-hero-highlights div {
+    padding: 0 9px;
+  }
+
+  .de-why-hero-highlights strong {
+    font-size: 12px;
+  }
+
+  .de-why-hero-highlights span {
+    font-size: 8px;
+  }
+
+  .de-why-comparison-header {
+    font-size: 8px;
+  }
+
+  .de-why-comparison-row {
+    font-size: 9px;
+  }
+
+  .de-why-final-card {
+    padding: 42px 17px;
+  }
+
+  .de-why-final-card h2 {
+    font-size: 30px;
+  }
+
+}

@@ -1,0 +1,122 @@
+.assistance-process-section {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.process-header {
+  margin-bottom: 60px;
+}
+
+.process-title {
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.process-subtitle {
+  font-size: 18px;
+  color: #d1f3f1;
+  font-weight: 500;
+}
+
+.process-steps-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.process-connector-line {
+  position: absolute;
+  top: 50px;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.25);
+  z-index: 1;
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.step-number-circle {
+  width: 64px;
+  height: 64px;
+  background-color: var(--white);
+  color: var(--primary-blue);
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  transition: transform var(--transition-normal);
+}
+
+.process-step-card:hover .step-number-circle {
+  transform: scale(1.1);
+  color: var(--teal);
+}
+
+.step-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+  .process-connector-line {
+    display: none;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .process-step-card {
+    flex-direction: row;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    border-radius: var(--radius-medium);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .step-number-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .process-title {
+    font-size: 28px;
+  }
+}

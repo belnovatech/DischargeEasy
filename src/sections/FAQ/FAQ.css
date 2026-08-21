@@ -1,0 +1,100 @@
+.faq-section {
+  background-color: var(--very-light-blue);
+  padding: 80px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.faq-accordion-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item-card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.faq-item-card:hover {
+  border-color: var(--teal);
+}
+
+.faq-item-card.active {
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-question-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 22px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-question-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-blue);
+  line-height: 1.4;
+}
+
+.faq-arrow-icon {
+  color: var(--primary-blue);
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.faq-arrow-icon.rotate {
+  transform: rotate(180deg);
+  color: var(--teal);
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+  padding: 0 28px;
+}
+
+.faq-answer-panel.show {
+  max-height: 500px;
+  padding-bottom: 22px;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0), padding 0.3s ease;
+}
+
+.faq-answer-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .faq-question-btn {
+    padding: 16px 20px;
+  }
+  .faq-question-text {
+    font-size: 15px;
+  }
+  .faq-answer-panel {
+    padding: 0 20px;
+  }
+  .faq-answer-panel.show {
+    padding-bottom: 16px;
+  }
+}

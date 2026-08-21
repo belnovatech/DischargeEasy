@@ -1,0 +1,118 @@
+.pricing-section {
+  background-color: var(--very-light-blue);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+.pricing-card-free {
+  border: 2px solid var(--teal);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.badge-teal {
+  background-color: var(--light-teal);
+  color: var(--teal);
+}
+
+.badge-blue {
+  background-color: var(--light-blue);
+  color: var(--primary-blue);
+}
+
+.pricing-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-blue);
+  margin-bottom: 6px;
+  margin-top: 10px;
+}
+
+.pricing-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.pricing-price-box {
+  background-color: var(--very-light-blue);
+  border-radius: var(--radius-medium);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid rgba(20, 75, 120, 0.05);
+}
+
+.pricing-price-box .price-amount {
+  font-size: 42px;
+  font-weight: 800;
+  display: block;
+  line-height: 1.1;
+}
+
+.pricing-price-box .price-period {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 6px;
+  display: block;
+}
+
+.pricing-card-body {
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.pricing-card-footer {
+  margin-top: auto;
+}
+
+.pricing-btn-link {
+  width: 100%;
+}
+
+.pricing-btn-link .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    padding: 30px;
+  }
+}

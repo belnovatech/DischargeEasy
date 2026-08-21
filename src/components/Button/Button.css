@@ -1,0 +1,80 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(32, 184, 176, 0.4);
+  outline-offset: 2px;
+}
+
+.btn-arrow {
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Primary Button - Dark Blue */
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--deep-blue);
+  box-shadow: 0 4px 15px rgba(7, 81, 168, 0.2);
+}
+
+/* Secondary Button - Teal */
+.btn-secondary {
+  background-color: var(--teal);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #1a9c95;
+  box-shadow: 0 4px 15px rgba(32, 184, 176, 0.2);
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+/* Light Button */
+.btn-light {
+  background-color: var(--light-teal);
+  color: #064b9f;
+}
+
+.btn-light:hover {
+  background-color: #d2f3f1;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}

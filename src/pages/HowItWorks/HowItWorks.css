@@ -1,0 +1,1525 @@
+/* ============================================================
+   DISCHARGEEASY - HOW IT WORKS PAGE
+   Completely isolated page styles
+============================================================ */
+
+.de-how-page {
+  --de-how-blue: #0d4e9d;
+  --de-how-blue-dark: #083f82;
+  --de-how-teal: #27b7b3;
+  --de-how-text: #123f69;
+  --de-how-muted: #70859a;
+  --de-how-border: #dce8ef;
+  --de-how-soft: #e8f8f8;
+  --de-how-bg: #f5fbfd;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  color: var(--de-how-text);
+
+  background: #ffffff;
+}
+
+.de-how-page *,
+.de-how-page *::before,
+.de-how-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.de-how-page-container {
+  width: min(1160px, calc(100% - 80px));
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.de-how-hero {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 100px 0 120px;
+
+  background:
+    radial-gradient(
+      circle at 78% 30%,
+      rgba(211, 244, 249, 0.95) 0,
+      rgba(231, 248, 250, 0.55) 28%,
+      transparent 58%
+    ),
+    linear-gradient(
+      135deg,
+      #eefafd 0%,
+      #ffffff 68%
+    );
+}
+
+.de-how-hero-content {
+  width: 650px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.de-how-eyebrow,
+.de-how-small-label {
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--de-how-blue);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 2.2px;
+
+  text-transform: uppercase;
+}
+
+.de-how-eyebrow {
+  padding: 10px 19px;
+
+  border-radius: 999px;
+
+  background: var(--de-how-soft);
+}
+
+.de-how-hero h1 {
+  margin: 24px 0 22px;
+
+  color: var(--de-how-blue);
+
+  font-size: clamp(48px, 5.4vw, 70px);
+
+  font-weight: 800;
+
+  line-height: 1.04;
+
+  letter-spacing: -2.6px;
+}
+
+.de-how-hero h1 span {
+  color: var(--de-how-teal);
+}
+
+.de-how-hero-content > p {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: var(--de-how-muted);
+
+  font-size: 18px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   HERO ACTIONS
+============================================================ */
+
+.de-how-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-top: 34px;
+}
+
+.de-how-primary-button,
+.de-how-secondary-button,
+.de-how-final-button {
+  min-height: 54px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 22px;
+
+  padding: 0 27px;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.de-how-primary-button {
+  border: 1px solid var(--de-how-blue);
+
+  background: var(--de-how-blue);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(13, 78, 157, 0.16);
+}
+
+.de-how-primary-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(13, 78, 157, 0.23);
+}
+
+.de-how-primary-button span,
+.de-how-final-button span {
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+.de-how-secondary-button {
+  border: 1px solid var(--de-how-border);
+
+  background: #ffffff;
+
+  color: var(--de-how-text);
+}
+
+.de-how-secondary-button:hover {
+  transform: translateY(-2px);
+
+  border-color: #bfd6e4;
+
+  box-shadow:
+    0 9px 22px rgba(30, 70, 100, 0.08);
+}
+
+
+/* ============================================================
+   HERO NOTE
+============================================================ */
+
+.de-how-hero-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 21px;
+
+  color: var(--de-how-muted);
+
+  font-size: 13px;
+}
+
+.de-how-check {
+  width: 21px;
+  height: 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--de-how-soft);
+
+  color: var(--de-how-teal);
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+/* ============================================================
+   HERO DECORATIVE GLOWS
+============================================================ */
+
+.de-how-hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(2px);
+
+  pointer-events: none;
+}
+
+.de-how-hero-glow-one {
+  width: 430px;
+  height: 430px;
+
+  right: 7%;
+  top: 70px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(37, 183, 179, 0.08),
+      transparent 68%
+    );
+}
+
+.de-how-hero-glow-two {
+  width: 330px;
+  height: 330px;
+
+  right: 24%;
+  bottom: 20px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(13, 78, 157, 0.07),
+      transparent 68%
+    );
+}
+
+
+/* ============================================================
+   WAVE
+============================================================ */
+
+.de-how-hero-wave {
+  position: absolute;
+
+  bottom: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 85px;
+
+  pointer-events: none;
+}
+
+.de-how-hero-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.de-how-hero-wave path {
+  fill: none;
+
+  stroke: #d9e7f0;
+
+  stroke-width: 2;
+}
+
+
+/* ============================================================
+   INTRO
+============================================================ */
+
+.de-how-intro {
+  padding: 105px 0 85px;
+
+  background: #ffffff;
+}
+
+.de-how-intro-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.de-how-intro-heading h2 {
+  margin: 17px 0 0;
+
+  color: var(--de-how-blue);
+
+  font-size: clamp(38px, 4vw, 52px);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.7px;
+}
+
+.de-how-intro-heading h2 span {
+  color: var(--de-how-teal);
+}
+
+.de-how-intro-text {
+  padding-left: 10px;
+}
+
+.de-how-intro-text p {
+  margin: 0 0 18px;
+
+  color: var(--de-how-muted);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.de-how-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   PROCESS SECTION
+============================================================ */
+
+.de-how-process {
+  padding: 105px 0 115px;
+
+  background: var(--de-how-bg);
+}
+
+.de-how-section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.de-how-section-heading h2 {
+  margin: 17px 0 17px;
+
+  color: var(--de-how-blue);
+
+  font-size: clamp(40px, 4vw, 54px);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.7px;
+}
+
+.de-how-section-heading h2 span {
+  color: var(--de-how-teal);
+}
+
+.de-how-section-heading p {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  color: var(--de-how-muted);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   PROCESS WRAPPER
+============================================================ */
+
+.de-how-process-wrapper {
+  position: relative;
+}
+
+.de-how-process-grid {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+  align-items: start;
+
+  z-index: 2;
+}
+
+
+/* ============================================================
+   PROCESS WAVE
+============================================================ */
+
+.de-how-process-wave {
+  position: absolute;
+
+  top: 31px;
+  left: 20px;
+  right: 20px;
+
+  height: 155px;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.de-how-process-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.de-how-process-wave path {
+  fill: none;
+
+  stroke: #c8dce9;
+
+  stroke-width: 2;
+
+  stroke-dasharray: 5 7;
+
+  stroke-linecap: round;
+}
+
+
+/* ============================================================
+   PROCESS CARD
+============================================================ */
+
+.de-how-process-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.de-how-step-number {
+  position: relative;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 6px solid var(--de-how-bg);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--de-how-blue),
+      var(--de-how-teal)
+    );
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 24px rgba(13, 78, 157, 0.18);
+
+  z-index: 3;
+}
+
+.de-how-process-content {
+  width: 100%;
+
+  min-height: 225px;
+
+  margin-top: 25px;
+
+  padding: 28px 25px;
+
+  border: 1px solid var(--de-how-border);
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 28px rgba(33, 79, 111, 0.07);
+
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.de-how-process-card:hover .de-how-process-content {
+  transform: translateY(-5px);
+
+  border-color: #c7dfe9;
+
+  box-shadow:
+    0 19px 36px rgba(33, 79, 111, 0.12);
+}
+
+.de-how-step-label {
+  color: var(--de-how-teal);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.de-how-process-content h3 {
+  margin: 13px 0 11px;
+
+  color: var(--de-how-blue);
+
+  font-size: 20px;
+
+  font-weight: 750;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.4px;
+}
+
+.de-how-process-content p {
+  margin: 0;
+
+  color: var(--de-how-muted);
+
+  font-size: 14px;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================================
+   BENEFITS
+============================================================ */
+
+.de-how-benefits {
+  padding: 110px 0;
+
+  background: #ffffff;
+}
+
+.de-how-benefits-card {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 90px;
+
+  padding: 65px 70px;
+
+  border: 1px solid var(--de-how-border);
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4fbfd 0%,
+      #ffffff 75%
+    );
+
+  box-shadow:
+    0 18px 40px rgba(33, 79, 111, 0.07);
+}
+
+.de-how-benefits-heading h2 {
+  margin: 17px 0 0;
+
+  color: var(--de-how-blue);
+
+  font-size: 43px;
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.4px;
+}
+
+.de-how-benefits-heading h2 span {
+  color: var(--de-how-teal);
+}
+
+
+/* ============================================================
+   BENEFIT LIST
+============================================================ */
+
+.de-how-benefits-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 36px 35px;
+}
+
+.de-how-benefit-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+}
+
+.de-how-benefit-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--de-how-soft);
+
+  color: var(--de-how-teal);
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.de-how-benefit-item h3 {
+  margin: 1px 0 7px;
+
+  color: var(--de-how-blue);
+
+  font-size: 17px;
+
+  font-weight: 750;
+}
+
+.de-how-benefit-item p {
+  margin: 0;
+
+  color: var(--de-how-muted);
+
+  font-size: 13.5px;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================================
+   FAQ
+============================================================ */
+
+.de-how-faq {
+  padding: 105px 0 120px;
+
+  background: var(--de-how-bg);
+}
+
+.de-how-faq-heading {
+  margin-bottom: 52px;
+}
+
+.de-how-faq-list {
+  width: min(900px, 100%);
+
+  margin: 0 auto;
+}
+
+.de-how-faq-item {
+  margin-bottom: 13px;
+
+  border: 1px solid var(--de-how-border);
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 7px 20px rgba(33, 79, 111, 0.05);
+}
+
+.de-how-faq-question {
+  width: 100%;
+
+  min-height: 72px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 0 27px;
+
+  border: 0;
+
+  background: #ffffff;
+
+  color: var(--de-how-blue);
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.de-how-faq-arrow {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: var(--de-how-soft);
+
+  color: var(--de-how-blue);
+
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.de-how-faq-open .de-how-faq-arrow {
+  transform: rotate(180deg);
+}
+
+.de-how-faq-answer {
+  display: grid;
+
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows 0.3s ease;
+}
+
+.de-how-faq-answer p {
+  min-height: 0;
+
+  overflow: hidden;
+
+  margin: 0;
+
+  padding: 0 27px;
+
+  color: var(--de-how-muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.de-how-faq-open .de-how-faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.de-how-faq-open .de-how-faq-answer p {
+  padding-bottom: 24px;
+}
+
+
+/* ============================================================
+   FINAL CTA
+============================================================ */
+
+.de-how-final {
+  position: relative;
+
+  padding: 105px 0 100px;
+
+  background: #ffffff;
+}
+
+.de-how-final-wave {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 75px;
+
+  pointer-events: none;
+}
+
+.de-how-final-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.de-how-final-wave path {
+  fill: none;
+
+  stroke: #d8e6ef;
+
+  stroke-width: 2;
+}
+
+.de-how-final-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 72px 40px;
+
+  border-radius: 34px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #0d4e9d 0%,
+      #0879a4 50%,
+      #27b7b3 100%
+    );
+
+  color: #ffffff;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 45px rgba(13, 78, 157, 0.18);
+}
+
+.de-how-final-card::after {
+  content: '';
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: -150px;
+  bottom: -230px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.13);
+}
+
+.de-how-final-label {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.de-how-final-card h2 {
+  position: relative;
+
+  z-index: 2;
+
+  margin: 17px 0 16px;
+
+  font-size: clamp(38px, 4vw, 53px);
+
+  font-weight: 800;
+
+  line-height: 1.07;
+
+  letter-spacing: -1.5px;
+}
+
+.de-how-final-card p {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: rgba(255,255,255,0.88);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+.de-how-final-button {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 28px;
+
+  border: 0;
+
+  background: #ffffff;
+
+  color: var(--de-how-blue);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.12);
+}
+
+.de-how-final-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(0,0,0,0.17);
+}
+
+.de-how-final-card small {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  margin-top: 17px;
+
+  color: rgba(255,255,255,0.76);
+
+  font-size: 12px;
+}
+
+
+/* ============================================================
+   LARGE TABLET
+============================================================ */
+
+@media (max-width: 1100px) {
+
+  .de-how-page-container {
+    width: min(920px, calc(100% - 60px));
+  }
+
+  .de-how-hero {
+    min-height: 590px;
+  }
+
+  .de-how-hero-content {
+    width: 590px;
+  }
+
+  .de-how-hero h1 {
+    font-size: 57px;
+  }
+
+  .de-how-process-grid {
+    gap: 16px;
+  }
+
+  .de-how-process-content {
+    padding: 24px 20px;
+  }
+
+  .de-how-process-content h3 {
+    font-size: 18px;
+  }
+
+  .de-how-process-content p {
+    font-size: 13px;
+  }
+
+  .de-how-benefits-card {
+    gap: 55px;
+
+    padding: 55px;
+  }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 850px) {
+
+  .de-how-page-container {
+    width: min(700px, calc(100% - 48px));
+  }
+
+
+  /* HERO */
+
+  .de-how-hero {
+    min-height: 570px;
+
+    padding: 90px 0 100px;
+  }
+
+  .de-how-hero-content {
+    width: 100%;
+
+    max-width: 650px;
+  }
+
+  .de-how-hero h1 {
+    font-size: 52px;
+  }
+
+
+  /* INTRO */
+
+  .de-how-intro {
+    padding: 80px 0 70px;
+  }
+
+  .de-how-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .de-how-intro-text {
+    padding-left: 0;
+  }
+
+
+  /* PROCESS */
+
+  .de-how-process {
+    padding: 85px 0 90px;
+  }
+
+  .de-how-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 20px;
+  }
+
+  .de-how-process-wave {
+    display: none;
+  }
+
+  .de-how-process-content {
+    min-height: 215px;
+  }
+
+
+  /* BENEFITS */
+
+  .de-how-benefits {
+    padding: 85px 0;
+  }
+
+  .de-how-benefits-card {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 48px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+  .de-how-page-container {
+    width: calc(100% - 32px);
+  }
+
+
+  /* HERO */
+
+  .de-how-hero {
+    min-height: auto;
+
+    padding: 72px 0 90px;
+  }
+
+  .de-how-eyebrow {
+    padding: 9px 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .de-how-hero h1 {
+    margin: 20px 0 18px;
+
+    font-size: 38px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.2px;
+  }
+
+  .de-how-hero-content > p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+
+  /* BUTTONS */
+
+  .de-how-hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+
+    margin-top: 27px;
+  }
+
+  .de-how-primary-button,
+  .de-how-secondary-button {
+    width: 100%;
+
+    min-height: 51px;
+
+    font-size: 14px;
+  }
+
+  .de-how-hero-note {
+    font-size: 12px;
+  }
+
+
+  /* WAVE */
+
+  .de-how-hero-wave {
+    height: 55px;
+  }
+
+
+  /* INTRO */
+
+  .de-how-intro {
+    padding: 68px 0 62px;
+  }
+
+  .de-how-intro-heading h2 {
+    font-size: 34px;
+
+    line-height: 1.1;
+  }
+
+  .de-how-intro-text p {
+    font-size: 14.5px;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .de-how-section-heading {
+    margin-bottom: 43px;
+  }
+
+  .de-how-section-heading h2 {
+    font-size: 35px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+  }
+
+  .de-how-section-heading p {
+    font-size: 14.5px;
+  }
+
+
+  /* PROCESS */
+
+  .de-how-process {
+    padding: 72px 0 75px;
+  }
+
+  .de-how-process-grid {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+    position: relative;
+  }
+
+  .de-how-process-grid::before {
+    content: '';
+
+    position: absolute;
+
+    left: 25px;
+
+    top: 25px;
+    bottom: 25px;
+
+    width: 2px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        var(--de-how-blue),
+        var(--de-how-teal)
+      );
+
+    opacity: 0.35;
+  }
+
+  .de-how-process-card {
+    display: grid;
+
+    grid-template-columns: 52px minmax(0, 1fr);
+
+    gap: 14px;
+
+    align-items: start;
+
+    text-align: left;
+  }
+
+  .de-how-step-number {
+    width: 52px;
+    height: 52px;
+
+    border-width: 5px;
+
+    font-size: 11px;
+  }
+
+  .de-how-process-content {
+    min-height: auto;
+
+    margin-top: 0;
+
+    padding: 21px 19px;
+
+    border-radius: 20px;
+  }
+
+  .de-how-process-content h3 {
+    margin: 10px 0 8px;
+
+    font-size: 18px;
+  }
+
+  .de-how-process-content p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* BENEFITS */
+
+  .de-how-benefits {
+    padding: 70px 0;
+  }
+
+  .de-how-benefits-card {
+    padding: 35px 22px;
+
+    border-radius: 25px;
+
+    gap: 35px;
+  }
+
+  .de-how-benefits-heading h2 {
+    font-size: 33px;
+  }
+
+  .de-how-benefits-list {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+  }
+
+  .de-how-benefit-item h3 {
+    font-size: 16px;
+  }
+
+  .de-how-benefit-item p {
+    font-size: 13px;
+  }
+
+
+  /* FAQ */
+
+  .de-how-faq {
+    padding: 72px 0 80px;
+  }
+
+  .de-how-faq-heading {
+    margin-bottom: 37px;
+  }
+
+  .de-how-faq-question {
+    min-height: 65px;
+
+    padding: 0 18px;
+
+    font-size: 14px;
+  }
+
+  .de-how-faq-arrow {
+    width: 25px;
+    height: 25px;
+
+    font-size: 13px;
+  }
+
+  .de-how-faq-answer p {
+    padding: 0 18px;
+
+    font-size: 13px;
+  }
+
+  .de-how-faq-open .de-how-faq-answer p {
+    padding-bottom: 19px;
+  }
+
+
+  /* FINAL CTA */
+
+  .de-how-final {
+    padding: 75px 0 65px;
+  }
+
+  .de-how-final-card {
+    padding: 48px 22px;
+
+    border-radius: 27px;
+  }
+
+  .de-how-final-card h2 {
+    font-size: 35px;
+
+    line-height: 1.1;
+  }
+
+  .de-how-final-card p {
+    font-size: 14px;
+  }
+
+  .de-how-final-button {
+    width: 100%;
+
+    min-height: 51px;
+
+    font-size: 14px;
+  }
+
+  .de-how-final-card small {
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 380px) {
+
+  .de-how-page-container {
+    width: calc(100% - 24px);
+  }
+
+  .de-how-hero {
+    padding-top: 62px;
+  }
+
+  .de-how-hero h1 {
+    font-size: 34px;
+  }
+
+  .de-how-intro-heading h2,
+  .de-how-section-heading h2 {
+    font-size: 31px;
+  }
+
+  .de-how-process-card {
+    grid-template-columns: 46px minmax(0, 1fr);
+
+    gap: 10px;
+  }
+
+  .de-how-step-number {
+    width: 46px;
+    height: 46px;
+  }
+
+  .de-how-process-grid::before {
+    left: 22px;
+  }
+
+  .de-how-process-content {
+    padding: 18px 16px;
+  }
+
+  .de-how-process-content h3 {
+    font-size: 17px;
+  }
+
+  .de-how-process-content p {
+    font-size: 12.5px;
+  }
+
+  .de-how-benefits-card {
+    padding: 30px 18px;
+  }
+
+  .de-how-benefits-heading h2 {
+    font-size: 29px;
+  }
+
+  .de-how-final-card h2 {
+    font-size: 31px;
+  }
+
+}

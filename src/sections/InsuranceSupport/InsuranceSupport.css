@@ -1,0 +1,105 @@
+.insurance-support-section {
+  background-color: var(--very-light-blue);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.support-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.support-card {
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-soft);
+}
+
+.support-card-left {
+  border-top: 5px solid var(--teal);
+}
+
+.support-card-right {
+  border-top: 5px solid var(--primary-blue);
+}
+
+.support-card-header {
+  margin-bottom: 30px;
+}
+
+.support-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-blue);
+  margin-bottom: 10px;
+}
+
+.support-card-desc {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.support-card-body {
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.support-card-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.support-card-price-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.price-amount {
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.text-blue {
+  color: var(--primary-blue);
+}
+
+.support-card-btn-link {
+  width: 100%;
+}
+
+.support-card-btn-link .btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .support-card {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,229 @@
+.hero-section {
+  background: var(--gradient-light);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero-container-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--heading-blue);
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.hero-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.hero-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hero-check-icon {
+  background-color: var(--light-teal);
+  color: var(--teal);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-info-tag {
+  font-size: 13px;
+  color: var(--text-secondary);
+  background-color: rgba(32, 184, 176, 0.08);
+  border-left: 3px solid var(--teal);
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  max-width: 580px;
+}
+
+.hero-btn-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.hero-subtext {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.hero-subtext .bold-text {
+  font-weight: 700;
+}
+
+/* Image & Floating Cards Wrapper */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-soft);
+  border: 4px solid var(--white);
+}
+
+/* Floating Cards Styles */
+.floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--white);
+  padding: 12px 20px;
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-color);
+  width: max-content;
+}
+
+.floating-icon-wrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guidance-color {
+  background-color: #e8f0fe;
+  color: var(--primary-blue);
+}
+
+.care-color {
+  background-color: #fce8e6;
+  color: #ea4335;
+}
+
+.assistance-color {
+  background-color: var(--light-teal);
+  color: var(--teal);
+}
+
+.floating-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--heading-blue);
+}
+
+.floating-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Positioning Floating Cards */
+.card-guidance {
+  top: 10%;
+  left: -20%;
+}
+
+.card-care {
+  bottom: 25%;
+  right: -15%;
+}
+
+.card-assistance {
+  bottom: -5%;
+  left: -10%;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+  .card-guidance {
+    left: -10%;
+  }
+  .card-care {
+    right: -5%;
+  }
+  .card-assistance {
+    left: -5%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-visual {
+    margin-top: 20px;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .card-guidance, .card-care, .card-assistance {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 10px auto;
+    float: none;
+    display: inline-flex;
+    margin-right: 15px;
+  }
+  .hero-image-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+  .hero-main-img {
+    height: 380px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 34px;
+  }
+  .hero-main-img {
+    height: 300px;
+  }
+  .card-guidance, .card-care, .card-assistance {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+  }
+}
