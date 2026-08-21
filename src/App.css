@@ -8,8 +8,9 @@
 .main-content {
   flex-grow: 1;
 }
+
 /* =========================================================
-   GLOBAL MOBILE WIDTH FIX
+   GLOBAL RESET / WIDTH FIX
    ========================================================= */
 
 html {
@@ -17,7 +18,6 @@ html {
   max-width: 100%;
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
 }
 
@@ -25,12 +25,9 @@ body {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
-
   box-sizing: border-box;
 }
 
@@ -38,16 +35,13 @@ body {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-
   margin: 0;
   padding: 0;
-
   overflow-x: hidden;
-
   box-sizing: border-box;
 }
 
-/* Prevent common elements from creating viewport overflow */
+/* Universal box sizing */
 
 *,
 *::before,
@@ -55,12 +49,16 @@ body {
   box-sizing: border-box;
 }
 
+/* Prevent media from overflowing */
+
 img,
 video,
 canvas,
 svg {
   max-width: 100%;
 }
+
+/* Prevent form controls from overflowing */
 
 button,
 input,

@@ -1,425 +1,1927 @@
 /* =========================================================
    INSURANCE DISCLAIMER
-   ========================================================= */
+   Completely isolated class namespace:
+   insdisc-*
+========================================================= */
 
-.disclaimer-page {
+.insdisc-page {
+  --insdisc-navy: #082f57;
+  --insdisc-deep: #061f3a;
+  --insdisc-blue: #075ca8;
+  --insdisc-cyan: #12b8c7;
+  --insdisc-sky: #65cfff;
+  --insdisc-bg: #f6fbfe;
+  --insdisc-card: rgba(255, 255, 255, 0.92);
+  --insdisc-border: #dceaf3;
+  --insdisc-text: #284761;
+  --insdisc-muted: #678198;
+  --insdisc-warning: #e89425;
+  --insdisc-danger: #d94b4b;
+  --insdisc-shadow: 0 22px 55px rgba(8, 47, 87, 0.09);
+
   width: 100%;
   min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 5% 8%,
+      rgba(101, 207, 255, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 40%,
+      rgba(18, 184, 199, 0.08),
+      transparent 25%
+    ),
+    var(--insdisc-bg);
 
-  background: #ffffff;
-
-  color: #173b61;
+  color: var(--insdisc-text);
+  overflow: hidden;
+  position: relative;
 }
+
 
 /* =========================================================
    HERO
-   ========================================================= */
+========================================================= */
 
-.disclaimer-hero {
-  width: 100%;
-
-  background:
-    radial-gradient(
-      circle at 88% 20%,
-      rgba(55, 208, 203, 0.20),
-      transparent 35%
-    ),
-    linear-gradient(
-      135deg,
-      #f5fbfd 0%,
-      #eafafa 100%
-    );
-}
-
-.disclaimer-hero-inner {
-  width: 100%;
-  max-width: 1120px;
-
-  margin: 0 auto;
-
-  padding: 68px 35px 60px;
-
-  box-sizing: border-box;
-}
-
-.disclaimer-badge {
-  display: inline-flex;
-
-  align-items: center;
-
-  height: 28px;
-
-  padding: 0 15px;
-
-  border: 1px solid #9ddfdf;
-
-  border-radius: 16px;
-
-  color: #07508d;
-
-  font-size: 8px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.8px;
-}
-
-.disclaimer-hero h1 {
-  margin: 21px 0 13px;
-
-  color: #173957;
-
-  font-size: 43px;
-
-  line-height: 1.08;
-
-  letter-spacing: -1.4px;
-
-  font-weight: 750;
-}
-
-.disclaimer-hero p {
-  max-width: 680px;
-
-  margin: 0;
-
-  color: #63819a;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-}
-
-.disclaimer-updated {
-  display: block;
-
-  margin-top: 17px;
-
-  color: #718ba0;
-
-  font-size: 9px;
-}
-
-/* =========================================================
-   CONTENT
-   ========================================================= */
-
-.disclaimer-content {
-  width: 100%;
-
-  padding: 55px 20px 70px;
-
-  box-sizing: border-box;
-}
-
-.disclaimer-content-inner {
-  width: 100%;
-
-  max-width: 850px;
-
-  margin: 0 auto;
-}
-
-/* =========================================================
-   IMPORTANT CARD
-   ========================================================= */
-
-.disclaimer-important {
+.insdisc-hero {
+  position: relative;
+  min-height: 510px;
   display: flex;
-
-  align-items: flex-start;
-
-  gap: 16px;
-
-  padding: 23px 25px;
-
-  margin-bottom: 38px;
-
-  border: 1px solid #9ddfdf;
-
-  border-radius: 20px;
-
-  background: #eafafa;
-
-  box-sizing: border-box;
-}
-
-.disclaimer-important-icon {
-  width: 34px;
-  height: 34px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
   align-items: center;
   justify-content: center;
+  padding: 90px 24px 100px;
+  overflow: hidden;
 
+  background:
+    linear-gradient(
+      135deg,
+      #fafdff 0%,
+      #eef9fd 45%,
+      #e5f6fb 100%
+    );
+
+  border-bottom: 1px solid #dcebf3;
+}
+
+.insdisc-hero::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: -300px;
+  left: -150px;
   border-radius: 50%;
+  background: rgba(101, 207, 255, 0.15);
+  filter: blur(10px);
+}
 
-  background: #0b75a0;
+.insdisc-hero::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -180px;
+  bottom: -300px;
+  border-radius: 50%;
+  background: rgba(18, 184, 199, 0.12);
+  filter: blur(15px);
+}
 
-  color: #ffffff;
+.insdisc-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-  font-size: 17px;
+.insdisc-hero-glow-one {
+  width: 170px;
+  height: 170px;
+  right: 13%;
+  top: 15%;
+  background: rgba(101, 207, 255, 0.13);
+  filter: blur(35px);
+}
 
+.insdisc-hero-glow-two {
+  width: 130px;
+  height: 130px;
+  left: 18%;
+  bottom: 10%;
+  background: rgba(18, 184, 199, 0.1);
+  filter: blur(30px);
+}
+
+.insdisc-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1050px, 100%);
+  text-align: center;
+}
+
+.insdisc-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 20px;
+  padding: 9px 16px;
+
+  border: 1px solid rgba(18, 184, 199, 0.2);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 30px rgba(8, 47, 87, 0.05);
+
+  color: #36aecd;
+
+  font-size: 12px;
   font-weight: 800;
+  letter-spacing: 2.2px;
 }
 
-.disclaimer-important h2 {
-  margin: 0 0 6px;
+.insdisc-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--insdisc-cyan);
 
-  color: #173f62;
-
-  font-size: 17px;
+  box-shadow:
+    0 0 0 5px rgba(18, 184, 199, 0.1),
+    0 0 16px rgba(18, 184, 199, 0.35);
 }
 
-.disclaimer-important p {
+.insdisc-hero h1 {
   margin: 0;
 
-  color: #55748c;
+  color: var(--insdisc-navy);
 
-  font-size: 12px;
-
-  line-height: 1.75;
+  font-size: clamp(46px, 6vw, 82px);
+  line-height: 0.98;
+  font-weight: 850;
+  letter-spacing: -3.5px;
 }
 
-/* =========================================================
-   SECTIONS
-   ========================================================= */
+.insdisc-hero h1 span {
+  display: block;
 
-.disclaimer-section {
-  padding-bottom: 28px;
+  background: linear-gradient(
+    90deg,
+    #075ca8,
+    #0a8eb7,
+    #12b8c7
+  );
 
-  margin-bottom: 28px;
-
-  border-bottom: 1px solid #e2ebf0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.disclaimer-section h2 {
-  margin: 0 0 13px;
+.insdisc-hero-description {
+  width: min(760px, 100%);
+  margin: 30px auto 0;
 
-  color: #173d60;
+  color: #607c94;
 
-  font-size: 18px;
-
-  line-height: 1.3;
-
-  font-weight: 700;
-}
-
-.disclaimer-section p {
-  margin: 0 0 11px;
-
-  color: #607b92;
-
-  font-size: 12px;
-
+  font-size: 17px;
   line-height: 1.8;
 }
 
-.disclaimer-section p:last-child {
-  margin-bottom: 0;
+.insdisc-hero-meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  margin-top: 34px;
+  padding: 15px 25px;
+
+  border: 1px solid #d9eaf3;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 35px rgba(8, 47, 87, 0.06);
+
+  backdrop-filter: blur(14px);
 }
 
+.insdisc-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insdisc-meta-item span {
+  color: #7b91a3;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.insdisc-meta-item strong {
+  color: var(--insdisc-navy);
+  font-size: 13px;
+}
+
+.insdisc-meta-divider {
+  width: 1px;
+  height: 25px;
+  background: #d5e4ec;
+}
+
+
 /* =========================================================
-   CONTACT
-   ========================================================= */
+   CONTENT WRAPPER
+========================================================= */
 
-.disclaimer-contact {
-  padding: 28px;
+.insdisc-content {
+  position: relative;
+  padding: 75px 24px 100px;
+}
 
-  border-radius: 20px;
+.insdisc-content-inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
 
-  background: #f1f9fe;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+/* =========================================================
+   IMPORTANT ALERT
+========================================================= */
+
+.insdisc-alert-card {
+  position: relative;
+
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+
+  padding: 30px 34px;
+
+  border: 1px solid rgba(18, 184, 199, 0.25);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(232, 249, 253, 0.95),
+      rgba(247, 252, 255, 0.96)
+    );
+
+  box-shadow:
+    0 20px 45px rgba(8, 47, 87, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  overflow: hidden;
+}
+
+.insdisc-alert-card::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -70px;
+  top: -90px;
+  border-radius: 50%;
+  background: rgba(101, 207, 255, 0.14);
+}
+
+.insdisc-alert-icon {
+  flex: 0 0 50px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #075ca8,
+    #12b8c7
+  );
+
+  color: #fff;
+
+  font-size: 25px;
+  font-weight: 900;
+
+  box-shadow: 0 10px 25px rgba(7, 92, 168, 0.22);
+}
+
+.insdisc-alert-content {
+  position: relative;
+  z-index: 2;
+}
+
+.insdisc-alert-label {
+  display: block;
+  margin-bottom: 7px;
+
+  color: #11a1b3;
+
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.8px;
+}
+
+.insdisc-alert-content h2 {
+  margin: 0 0 10px;
+
+  color: var(--insdisc-navy);
+
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.insdisc-alert-content p {
+  margin: 0;
+
+  color: var(--insdisc-text);
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   GENERAL SECTION CARD
+========================================================= */
+
+.insdisc-section-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 30px;
+
+  padding: 42px;
+
+  border: 1px solid var(--insdisc-border);
+  border-radius: 28px;
+
+  background: var(--insdisc-card);
+
+  box-shadow: var(--insdisc-shadow);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.insdisc-section-card::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -100px;
+  bottom: -110px;
+
+  border-radius: 50%;
+
+  background: rgba(101, 207, 255, 0.08);
+
+  transition: transform 0.5s ease;
+}
+
+.insdisc-section-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #c8e4ef;
+
+  box-shadow:
+    0 28px 65px rgba(8, 47, 87, 0.12);
+}
+
+.insdisc-section-card:hover::before {
+  transform: scale(1.35);
+}
+
+.insdisc-section-number {
+  position: relative;
+  z-index: 2;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e8f8fd,
+      #d7f2f7
+    );
+
+  border: 1px solid #c9e9f1;
+
+  color: #087ca3;
+
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 10px 25px rgba(18, 184, 199, 0.08);
+}
+
+.insdisc-section-body {
+  position: relative;
+  z-index: 2;
+}
+
+.insdisc-section-heading {
+  margin-bottom: 18px;
+}
+
+.insdisc-section-heading span {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #23a9bc;
+
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.insdisc-section-heading h2 {
+  margin: 0;
+
+  color: var(--insdisc-navy);
+
+  font-size: clamp(23px, 2.4vw, 31px);
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+}
+
+.insdisc-section-body p {
+  margin: 0 0 17px;
+
+  color: var(--insdisc-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HIGHLIGHT BOX
+========================================================= */
+
+.insdisc-highlight-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: 24px;
+  padding: 18px 20px;
+
+  border-left: 4px solid var(--insdisc-cyan);
+  border-radius: 0 14px 14px 0;
+
+  background: #effaff;
+}
+
+.insdisc-highlight-box strong {
+  color: var(--insdisc-navy);
+  font-size: 14px;
+}
+
+.insdisc-highlight-box span {
+  color: var(--insdisc-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   INFORMATION CHIPS
+========================================================= */
+
+.insdisc-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 11px;
+
+  margin: 25px 0;
+}
+
+.insdisc-info-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-height: 48px;
+  padding: 10px 13px;
+
+  border: 1px solid #e0edf3;
+  border-radius: 13px;
+
+  background: #fbfdff;
+
+  color: var(--insdisc-text);
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.insdisc-info-chip span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  flex: 0 0 24px;
+
+  border-radius: 8px;
+
+  background: #e8f8fb;
+  color: #0b94aa;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.insdisc-info-chip:hover {
+  transform: translateY(-2px);
+  border-color: #bfe3ec;
+  box-shadow: 0 8px 20px rgba(8, 47, 87, 0.06);
+}
+
+.insdisc-note {
+  color: var(--insdisc-muted) !important;
+  font-size: 14px !important;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.insdisc-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin: 24px 0;
+}
+
+.insdisc-service-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e0edf3;
+  border-radius: 15px;
+
+  background: #fcfeff;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.insdisc-service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(8, 47, 87, 0.07);
+}
+
+.insdisc-service-icon {
+  width: 31px;
+  height: 31px;
+
+  flex: 0 0 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #e9f8fb;
+  color: #078fa8;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.insdisc-service-card span {
+  color: var(--insdisc-text);
+
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   DANGER CARD
+========================================================= */
+
+.insdisc-danger-card {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+
+  margin-top: 25px;
+  padding: 19px;
+
+  border: 1px solid rgba(217, 75, 75, 0.18);
+  border-radius: 16px;
+
+  background: #fff7f7;
+}
+
+.insdisc-danger-icon {
+  width: 34px;
+  height: 34px;
+
+  flex: 0 0 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #ffe4e4;
+  color: var(--insdisc-danger);
+
+  font-weight: 900;
+}
+
+.insdisc-danger-card strong {
+  display: block;
+  margin-bottom: 5px;
+
+  color: #bb3434;
+
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.insdisc-danger-card p {
+  margin: 0;
+
+  color: #825959;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   REQUIREMENTS
+========================================================= */
+
+.insdisc-requirement-grid,
+.insdisc-document-grid,
+.insdisc-control-grid,
+.insdisc-partner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  margin: 22px 0;
+}
+
+.insdisc-requirement-grid div,
+.insdisc-document-grid div,
+.insdisc-control-grid div,
+.insdisc-partner-grid div {
+  position: relative;
+
+  padding: 14px 15px 14px 38px;
+
+  border: 1px solid #e2edf2;
+  border-radius: 13px;
+
+  background: #fbfdff;
+
+  color: var(--insdisc-text);
+
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 650;
+}
+
+.insdisc-requirement-grid div::before,
+.insdisc-document-grid div::before,
+.insdisc-control-grid div::before,
+.insdisc-partner-grid div::before {
+  content: "✓";
+
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #0ba1b4;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   INLINE WARNING
+========================================================= */
+
+.insdisc-inline-warning {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 22px;
+  padding: 15px 17px;
+
+  border-radius: 13px;
+
+  background: #fff9ed;
+  border: 1px solid #f4e0b9;
+}
+
+.insdisc-inline-warning span {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+
+  border-radius: 9px;
+
+  background: #ffe9bc;
+  color: #b97308;
+
+  font-weight: 900;
+}
+
+.insdisc-inline-warning p {
+  margin: 0;
+
+  color: #765a2d;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   STRONG WARNING
+========================================================= */
+
+.insdisc-strong-warning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 25px;
+  padding: 22px;
+
+  border: 1px solid rgba(217, 75, 75, 0.2);
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff6f6,
+      #fffafa
+    );
 
   text-align: center;
 }
 
-.disclaimer-contact h2 {
-  margin: 0 0 9px;
+.insdisc-strong-warning span {
+  color: #d25b5b;
 
-  color: #173d60;
-
-  font-size: 20px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
 }
 
-.disclaimer-contact p {
-  max-width: 570px;
+.insdisc-strong-warning strong {
+  color: #ae3030;
 
-  margin: 0 auto 18px;
-
-  color: #6b8599;
-
-  font-size: 11px;
-
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-.disclaimer-button {
-  display: inline-flex;
 
-  align-items: center;
-  justify-content: center;
+/* =========================================================
+   PILL LIST
+========================================================= */
 
-  min-height: 38px;
+.insdisc-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 
-  padding: 0 22px;
+  margin: 22px 0;
+}
 
-  border-radius: 20px;
+.insdisc-pill-list span {
+  padding: 9px 13px;
 
-  background: linear-gradient(
-    90deg,
-    #073e83,
-    #18b8bd
-  );
+  border: 1px solid #d8eaf1;
+  border-radius: 999px;
 
-  color: #ffffff;
+  background: #f4fbfd;
 
-  text-decoration: none;
+  color: #24617d;
 
-  font-size: 11px;
-
+  font-size: 12px;
   font-weight: 700;
 }
 
+.insdisc-subtle-warning {
+  padding: 15px 17px;
+
+  border-radius: 13px;
+
+  background: #f8fbfd;
+  border: 1px solid #e2edf2;
+
+  color: #627b8d;
+
+  font-size: 13px;
+  font-weight: 650;
+}
+
+
 /* =========================================================
-   TABLET
-   ========================================================= */
+   ₹999 FEE CARD
+========================================================= */
 
-@media (max-width: 900px) {
-  .disclaimer-hero-inner {
-    padding: 60px 30px 55px;
+.insdisc-fee-section {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f9fdff 60%,
+      #effbfc 100%
+    );
+}
+
+.insdisc-fee-card {
+  position: relative;
+
+  width: min(420px, 100%);
+
+  margin: 28px auto;
+
+  padding: 28px;
+
+  text-align: center;
+
+  border: 1px solid #cce9ef;
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eefaff,
+      #ffffff
+    );
+
+  box-shadow:
+    0 20px 45px rgba(18, 184, 199, 0.1);
+}
+
+.insdisc-fee-label {
+  color: #3ca9bb;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.insdisc-fee-amount {
+  margin-top: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #075ca8,
+    #12b8c7
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  font-size: 65px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.insdisc-fee-unit {
+  color: var(--insdisc-navy);
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.insdisc-fee-card p {
+  margin: 14px 0 0;
+
+  color: var(--insdisc-muted);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   TWO COLUMN LISTS
+========================================================= */
+
+.insdisc-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+.insdisc-list-card {
+  padding: 22px;
+
+  border: 1px solid #e1edf3;
+  border-radius: 18px;
+
+  background: #fcfeff;
+}
+
+.insdisc-list-card h3 {
+  margin: 0 0 13px;
+
+  color: var(--insdisc-navy);
+
+  font-size: 14px;
+}
+
+.insdisc-list-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.insdisc-list-card li {
+  position: relative;
+
+  padding-left: 21px;
+  margin-bottom: 9px;
+
+  color: var(--insdisc-text);
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.insdisc-list-card li:last-child {
+  margin-bottom: 0;
+}
+
+.insdisc-list-card li::before {
+  content: "•";
+
+  position: absolute;
+  left: 4px;
+
+  color: var(--insdisc-cyan);
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   NO GUARANTEE
+========================================================= */
+
+.insdisc-no-guarantee {
+  border-color: #f1d9d9;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fff9f9
+    );
+}
+
+.insdisc-guarantee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin: 22px 0;
+}
+
+.insdisc-guarantee-grid span {
+  padding: 14px;
+
+  border: 1px solid #f1dddd;
+  border-radius: 13px;
+
+  background: #fffafa;
+
+  color: #8a4b4b;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.insdisc-final-note {
+  padding: 17px;
+
+  border-radius: 14px;
+
+  background: #fff4f4;
+
+  color: #744f4f !important;
+
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   MEDICAL CARD
+========================================================= */
+
+.insdisc-medical-card {
+  border-color: #d8e7ee;
+}
+
+.insdisc-medical-boundaries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  margin: 22px 0;
+}
+
+.insdisc-medical-boundaries div {
+  padding: 18px 12px;
+
+  border: 1px solid #e0edf2;
+  border-radius: 15px;
+
+  background: #fbfdff;
+
+  color: var(--insdisc-text);
+
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.insdisc-medical-boundaries span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #12a4b6;
+
+  font-size: 10px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   REGULATORY CARD
+========================================================= */
+
+.insdisc-regulatory-card {
+  display: flex;
+  gap: 17px;
+
+  margin-top: 25px;
+  padding: 23px;
+
+  border: 1px solid #dcecf2;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4fbfd,
+      #ffffff
+    );
+}
+
+.insdisc-regulatory-icon {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #dff6f8;
+  color: #078fa5;
+
+  font-weight: 900;
+}
+
+.insdisc-regulatory-card h3 {
+  margin: 0 0 8px;
+
+  color: var(--insdisc-navy);
+
+  font-size: 16px;
+}
+
+.insdisc-regulatory-card p {
+  margin-bottom: 12px;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIBILITY GRID
+========================================================= */
+
+.insdisc-responsibility-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+
+  margin: 22px 0;
+}
+
+.insdisc-responsibility-grid div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid #e0edf2;
+  border-radius: 14px;
+
+  background: #fbfdff;
+
+  color: var(--insdisc-text);
+
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.insdisc-responsibility-grid span {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #e8f8fb;
+  color: #078fa8;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.insdisc-note-box {
+  padding: 17px 19px;
+
+  border-left: 4px solid #12b8c7;
+  border-radius: 0 13px 13px 0;
+
+  background: #effaff;
+
+  color: #527186;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   POLICY PREVAIL
+========================================================= */
+
+.insdisc-policy-prevail {
+  position: relative;
+
+  display: flex;
+  gap: 24px;
+
+  padding: 36px;
+
+  border-radius: 27px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #063d6c,
+      #075d91 55%,
+      #087d91
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 25px 55px rgba(6, 61, 108, 0.22);
+
+  overflow: hidden;
+}
+
+.insdisc-policy-prevail::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -130px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.insdisc-policy-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 52px;
+  height: 52px;
+
+  flex: 0 0 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.insdisc-policy-prevail > div:last-child {
+  position: relative;
+  z-index: 2;
+}
+
+.insdisc-policy-prevail span {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #8ee8ef;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.insdisc-policy-prevail h2 {
+  margin: 0 0 13px;
+
+  color: #ffffff;
+
+  font-size: 28px;
+}
+
+.insdisc-policy-prevail p {
+  color: rgba(255, 255, 255, 0.83);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.insdisc-policy-prevail strong {
+  display: block;
+
+  margin: 18px 0;
+
+  padding: 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LEGAL NOTE
+========================================================= */
+
+.insdisc-legal-note {
+  margin-top: 25px;
+  padding: 21px;
+
+  border: 1px solid #f0dfb9;
+  border-radius: 16px;
+
+  background: #fffaf0;
+}
+
+.insdisc-legal-note strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #8d641e;
+
+  font-size: 13px;
+}
+
+.insdisc-legal-note p {
+  margin: 0;
+
+  color: #765f36;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.insdisc-contact-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 65px 55px;
+
+  border-radius: 32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #062d51,
+      #07598a 52%,
+      #087f91
+    );
+
+  box-shadow:
+    0 30px 70px rgba(5, 46, 80, 0.2);
+
+  color: #ffffff;
+}
+
+.insdisc-contact-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -220px;
+  bottom: -280px;
+
+  border-radius: 50%;
+
+  background: rgba(101, 207, 255, 0.12);
+}
+
+.insdisc-contact-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -160px;
+  top: -190px;
+
+  border-radius: 50%;
+
+  background: rgba(18, 184, 199, 0.16);
+}
+
+.insdisc-contact-glow {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  left: 50%;
+  top: 40%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: rgba(101, 207, 255, 0.08);
+
+  filter: blur(40px);
+}
+
+.insdisc-contact-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 920px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.insdisc-contact-eyebrow {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: #7ee9f0;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+}
+
+.insdisc-contact-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(29px, 4vw, 44px);
+  letter-spacing: -1px;
+}
+
+.insdisc-contact-content > p {
+  width: min(700px, 100%);
+  margin: 18px auto 32px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.insdisc-contact-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  margin-bottom: 32px;
+}
+
+.insdisc-contact-item {
+  padding: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(12px);
+}
+
+.insdisc-contact-item span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #84dfe7;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.insdisc-contact-item strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.insdisc-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 52px;
+
+  padding: 0 26px;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #07558a;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 850;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.insdisc-contact-button span {
+  font-size: 19px;
+
+  transition: transform 0.25s ease;
+}
+
+.insdisc-contact-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 35px rgba(0, 0, 0, 0.2);
+}
+
+.insdisc-contact-button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .insdisc-hero {
+    min-height: 470px;
+    padding: 80px 25px;
   }
 
-  .disclaimer-hero h1 {
-    font-size: 39px;
+  .insdisc-content {
+    padding: 60px 22px 80px;
   }
 
-  .disclaimer-content {
-    padding-top: 45px;
+  .insdisc-section-card {
+    padding: 34px;
+  }
+
+  .insdisc-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insdisc-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insdisc-medical-boundaries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insdisc-guarantee-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+
 /* =========================================================
-   MOBILE
-   ========================================================= */
+   TABLET
+========================================================= */
 
-@media (max-width: 600px) {
-  .disclaimer-hero-inner {
-    padding: 52px 20px 45px;
+@media (max-width: 768px) {
+
+  .insdisc-hero {
+    min-height: auto;
+    padding: 70px 20px 75px;
   }
 
-  .disclaimer-badge {
-    height: 25px;
-
-    padding: 0 12px;
-
-    font-size: 7px;
+  .insdisc-hero h1 {
+    font-size: clamp(43px, 11vw, 62px);
+    letter-spacing: -2.5px;
   }
 
-  .disclaimer-hero h1 {
-    margin-top: 19px;
+  .insdisc-hero-description {
+    margin-top: 24px;
 
-    font-size: 34px;
-
-    letter-spacing: -0.8px;
-  }
-
-  .disclaimer-hero p {
-    font-size: 12px;
-
-    line-height: 1.65;
-  }
-
-  .disclaimer-updated {
-    font-size: 8px;
-  }
-
-  .disclaimer-content {
-    padding: 38px 15px 50px;
-  }
-
-  .disclaimer-important {
-    gap: 12px;
-
-    padding: 19px;
-
-    margin-bottom: 30px;
-
-    border-radius: 17px;
-  }
-
-  .disclaimer-important-icon {
-    width: 29px;
-    height: 29px;
-
-    font-size: 14px;
-  }
-
-  .disclaimer-important h2 {
-    font-size: 16px;
-  }
-
-  .disclaimer-important p {
-    font-size: 11px;
-
+    font-size: 15px;
     line-height: 1.7;
   }
 
-  .disclaimer-section {
-    padding-bottom: 22px;
+  .insdisc-hero-meta {
+    width: 100%;
 
-    margin-bottom: 22px;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 28px;
   }
 
-  .disclaimer-section h2 {
-    font-size: 16px;
+  .insdisc-meta-divider {
+    width: 70px;
+    height: 1px;
   }
 
-  .disclaimer-section p {
-    font-size: 11px;
+  .insdisc-meta-item {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
+  .insdisc-content {
+    padding: 45px 16px 65px;
+  }
+
+  .insdisc-content-inner {
+    gap: 18px;
+  }
+
+  .insdisc-alert-card {
+    padding: 24px;
+    border-radius: 21px;
+  }
+
+  .insdisc-section-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    padding: 27px 22px;
+
+    border-radius: 22px;
+  }
+
+  .insdisc-section-number {
+    width: 51px;
+    height: 51px;
+
+    border-radius: 15px;
+  }
+
+  .insdisc-info-grid,
+  .insdisc-service-grid,
+  .insdisc-two-column,
+  .insdisc-responsibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insdisc-requirement-grid,
+  .insdisc-document-grid,
+  .insdisc-control-grid,
+  .insdisc-partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insdisc-guarantee-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .insdisc-medical-boundaries {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .insdisc-policy-prevail {
+    padding: 28px 23px;
+    border-radius: 22px;
+  }
+
+  .insdisc-contact-card {
+    padding: 45px 22px;
+    border-radius: 25px;
+  }
+
+  .insdisc-contact-details {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .insdisc-hero {
+    padding: 55px 16px 60px;
+  }
+
+  .insdisc-eyebrow {
+    padding: 8px 12px;
+
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .insdisc-eyebrow-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .insdisc-hero h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+  .insdisc-hero-description {
+    font-size: 14px;
+  }
+
+  .insdisc-hero-meta {
+    padding: 13px 15px;
+  }
+
+  .insdisc-meta-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .insdisc-meta-divider {
+    display: none;
+  }
+
+  .insdisc-alert-card {
+    flex-direction: column;
+    padding: 22px 18px;
+  }
+
+  .insdisc-alert-icon {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .insdisc-alert-content h2 {
+    font-size: 19px;
+  }
+
+  .insdisc-alert-content p {
+    font-size: 13px;
+  }
+
+  .insdisc-section-card {
+    padding: 24px 18px;
+  }
+
+  .insdisc-section-heading h2 {
+    font-size: 22px;
+  }
+
+  .insdisc-section-body p {
+    font-size: 13px;
     line-height: 1.75;
   }
 
-  .disclaimer-contact {
-    padding: 22px 18px;
-
-    border-radius: 17px;
+  .insdisc-info-grid {
+    grid-template-columns: 1fr;
   }
 
-  .disclaimer-contact h2 {
-    font-size: 18px;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 380px) {
-  .disclaimer-hero h1 {
-    font-size: 30px;
+  .insdisc-service-grid {
+    grid-template-columns: 1fr;
   }
 
-  .disclaimer-hero p {
+  .insdisc-guarantee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insdisc-medical-boundaries {
+    grid-template-columns: 1fr;
+  }
+
+  .insdisc-pill-list {
+    gap: 7px;
+  }
+
+  .insdisc-pill-list span {
     font-size: 11px;
   }
 
-  .disclaimer-important {
-    padding: 16px;
+  .insdisc-fee-card {
+    padding: 24px 18px;
   }
 
-  .disclaimer-section h2 {
-    font-size: 15px;
+  .insdisc-fee-amount {
+    font-size: 55px;
   }
 
-  .disclaimer-section p {
-    font-size: 10px;
+  .insdisc-policy-prevail {
+    flex-direction: column;
+    gap: 17px;
+
+    padding: 25px 19px;
   }
 
-  .disclaimer-contact h2 {
-    font-size: 17px;
+  .insdisc-policy-prevail h2 {
+    font-size: 24px;
   }
+
+  .insdisc-policy-prevail strong {
+    font-size: 12px;
+  }
+
+  .insdisc-regulatory-card {
+    flex-direction: column;
+  }
+
+  .insdisc-contact-card {
+    padding: 42px 18px;
+  }
+
+  .insdisc-contact-content h2 {
+    font-size: 28px;
+  }
+
+  .insdisc-contact-content > p {
+    font-size: 13px;
+  }
+
+  .insdisc-contact-item {
+    padding: 15px;
+  }
+
+  .insdisc-contact-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .insdisc-hero h1 {
+    font-size: 38px;
+  }
+
+  .insdisc-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .insdisc-section-card {
+    padding: 21px 15px;
+  }
+
+  .insdisc-section-heading h2 {
+    font-size: 20px;
+  }
+
+  .insdisc-policy-prevail {
+    padding: 22px 16px;
+  }
+
+  .insdisc-contact-card {
+    padding: 35px 15px;
+  }
+
 }

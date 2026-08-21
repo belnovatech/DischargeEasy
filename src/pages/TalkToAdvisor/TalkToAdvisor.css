@@ -1,15 +1,30 @@
 /* =========================================================
    TALK TO AN ADVISOR
+   Modern / Premium / Responsive
    ========================================================= */
 
 .advisor-page {
   width: 100%;
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 
-  background: #ffffff;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(24, 184, 189, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(7, 62, 131, 0.06),
+      transparent 30%
+    ),
+    #ffffff;
 
   color: #173b61;
 }
+
 
 /* =========================================================
    HERO
@@ -17,80 +32,189 @@
 
 .advisor-hero {
   width: 100%;
+  position: relative;
+  overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 88% 20%,
-      rgba(72, 210, 204, 0.20),
-      transparent 35%
+      circle at 85% 15%,
+      rgba(24, 184, 189, 0.22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 8% 90%,
+      rgba(7, 62, 131, 0.08),
+      transparent 30%
     ),
     linear-gradient(
       135deg,
-      #f5fbfd 0%,
-      #eafafa 100%
+      #f7fcff 0%,
+      #eefbfd 50%,
+      #eaf8fc 100%
     );
+
+  border-bottom: 1px solid rgba(157, 223, 223, 0.45);
 }
+
+
+/* Decorative glow */
+
+.advisor-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -130px;
+  right: 8%;
+
+  border-radius: 50%;
+
+  background: rgba(24, 184, 189, 0.10);
+
+  filter: blur(8px);
+
+  pointer-events: none;
+}
+
+
+.advisor-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  left: -90px;
+  bottom: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(7, 62, 131, 0.07);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO INNER
+   ========================================================= */
 
 .advisor-hero-inner {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1180px;
 
   margin: 0 auto;
 
-  padding: 70px 35px 72px;
+  padding: 90px 45px 85px;
 
   box-sizing: border-box;
+
+  position: relative;
+  z-index: 2;
 }
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
 
 .advisor-badge {
   display: inline-flex;
 
   align-items: center;
+  justify-content: center;
 
-  height: 27px;
+  min-height: 32px;
 
-  padding: 0 14px;
+  padding: 0 17px;
 
-  border: 1px solid #9ddfdf;
+  border: 1px solid rgba(39, 184, 190, 0.35);
 
-  border-radius: 15px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  box-shadow:
+    0 5px 18px rgba(20, 90, 120, 0.06);
 
   color: #07508d;
 
-  font-size: 8px;
+  font-size: 11px;
 
-  font-weight: 700;
+  font-weight: 800;
 
-  letter-spacing: 1.7px;
+  letter-spacing: 2px;
 
   text-transform: uppercase;
+
+  backdrop-filter: blur(10px);
 }
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
 
 .advisor-hero h1 {
-  margin: 22px 0 14px;
+  margin: 25px 0 18px;
 
-  color: #173957;
+  color: #123b61;
 
-  font-size: 42px;
+  font-size: clamp(42px, 5vw, 64px);
 
-  line-height: 1.08;
+  line-height: 1.04;
 
-  letter-spacing: -1.3px;
+  letter-spacing: -2px;
 
-  font-weight: 750;
+  font-weight: 800;
+
+  max-width: 800px;
 }
 
+
+/* Gradient text accent */
+
+.advisor-hero h1::after {
+  content: "";
+
+  display: block;
+
+  width: 75px;
+  height: 5px;
+
+  margin-top: 20px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #073e83,
+    #18b8bd
+  );
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
 .advisor-hero p {
-  max-width: 510px;
+  max-width: 680px;
 
   margin: 0;
 
-  color: #63819a;
+  color: #5f7d95;
 
-  font-size: 13px;
+  font-size: 18px;
 
-  line-height: 1.6;
+  line-height: 1.75;
+
+  letter-spacing: 0.05px;
 }
+
 
 /* =========================================================
    FORM SECTION
@@ -99,12 +223,72 @@
 .advisor-form-section {
   width: 100%;
 
-  padding: 80px 20px 55px;
-
-  background: #ffffff;
+  padding: 90px 24px 90px;
 
   box-sizing: border-box;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(24, 184, 189, 0.06),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(7, 62, 131, 0.05),
+      transparent 30%
+    ),
+    #ffffff;
 }
+
+
+/* =========================================================
+   FORM SECTION DECORATIVE GLOW
+   ========================================================= */
+
+.advisor-form-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  left: -150px;
+  top: 100px;
+
+  border-radius: 50%;
+
+  background: rgba(24, 184, 189, 0.05);
+
+  filter: blur(30px);
+
+  pointer-events: none;
+}
+
+
+.advisor-form-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -125px;
+  bottom: 80px;
+
+  border-radius: 50%;
+
+  background: rgba(7, 62, 131, 0.05);
+
+  filter: blur(30px);
+
+  pointer-events: none;
+}
+
 
 /* =========================================================
    FORM CARD
@@ -112,23 +296,49 @@
 
 .advisor-form-card {
   width: 100%;
-  max-width: 500px;
+
+  max-width: 760px;
 
   margin: 0 auto;
 
-  padding: 25px;
+  padding: 42px;
 
   box-sizing: border-box;
 
-  border: 1px solid #d8e4ed;
+  position: relative;
+  z-index: 2;
 
-  border-radius: 22px;
+  border: 1px solid rgba(194, 220, 232, 0.85);
 
-  background: #ffffff;
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(246, 252, 255, 0.94)
+    );
 
   box-shadow:
-    0 10px 25px rgba(20, 68, 105, 0.07);
+    0 25px 70px rgba(20, 68, 105, 0.10),
+    0 8px 25px rgba(20, 68, 105, 0.05);
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+
+.advisor-form-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 32px 80px rgba(20, 68, 105, 0.13),
+    0 10px 30px rgba(20, 68, 105, 0.06);
+}
+
 
 /* =========================================================
    FORM
@@ -138,6 +348,11 @@
   width: 100%;
 }
 
+
+/* =========================================================
+   FORM ROW
+   ========================================================= */
+
 .advisor-form-row {
   display: grid;
 
@@ -145,77 +360,125 @@
     1fr
     1fr;
 
-  gap: 14px;
+  gap: 22px;
 
-  margin-bottom: 13px;
+  margin-bottom: 22px;
 }
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
 
 .advisor-field {
   width: 100%;
 }
 
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
 .advisor-field label {
   display: block;
 
-  margin-bottom: 7px;
+  margin-bottom: 9px;
 
-  color: #46657d;
+  color: #315b78;
 
-  font-size: 8px;
+  font-size: 12px;
 
-  font-weight: 700;
+  font-weight: 800;
 
-  letter-spacing: 1px;
+  letter-spacing: 0.9px;
 
-  line-height: 1.2;
+  line-height: 1.3;
 
   text-transform: uppercase;
 }
+
+
+/* =========================================================
+   INPUT / SELECT
+   ========================================================= */
 
 .advisor-field input,
 .advisor-field select {
   width: 100%;
 
-  height: 35px;
+  min-height: 50px;
 
-  padding: 0 14px;
+  padding: 0 17px;
 
   box-sizing: border-box;
 
-  border: 1px solid #d6e2eb;
+  border: 1px solid #d5e3ec;
 
-  border-radius: 18px;
+  border-radius: 15px;
 
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.92);
 
   color: #173e60;
 
   font-family: inherit;
 
-  font-size: 12px;
+  font-size: 15px;
+
+  font-weight: 500;
 
   outline: none;
 
+  box-shadow:
+    inset 0 1px 2px rgba(20, 68, 105, 0.02);
+
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
 }
+
+
+.advisor-field input::placeholder {
+  color: #9aabba;
+}
+
+
+.advisor-field input:hover,
+.advisor-field select:hover {
+  border-color: #a9d3df;
+
+  background: #ffffff;
+}
+
 
 .advisor-field input:focus,
 .advisor-field select:focus {
-  border-color: #27b8be;
+  border-color: #20b5bc;
+
+  background: #ffffff;
+
+  transform: translateY(-1px);
 
   box-shadow:
-    0 0 0 3px rgba(39, 184, 190, 0.1);
+    0 0 0 4px rgba(32, 181, 188, 0.10),
+    0 8px 20px rgba(20, 100, 130, 0.06);
 }
+
 
 .advisor-field select {
   cursor: pointer;
 }
 
+
+/* =========================================================
+   REQUIREMENT FIELD
+   ========================================================= */
+
 .advisor-requirement {
-  margin-bottom: 17px;
+  margin-bottom: 24px;
 }
+
 
 /* =========================================================
    CONSENT
@@ -226,22 +489,31 @@
 
   align-items: flex-start;
 
-  gap: 9px;
+  gap: 11px;
 
-  color: #71889b;
+  padding: 13px 15px;
 
-  font-size: 9px;
+  border-radius: 13px;
 
-  line-height: 1.5;
+  background: rgba(237, 249, 252, 0.75);
+
+  border: 1px solid rgba(205, 230, 236, 0.7);
+
+  color: #657f93;
+
+  font-size: 12px;
+
+  line-height: 1.6;
 
   cursor: pointer;
 }
 
-.advisor-consent input {
-  width: 13px;
-  height: 13px;
 
-  margin: 0;
+.advisor-consent input {
+  width: 17px;
+  height: 17px;
+
+  margin: 2px 0 0;
 
   flex-shrink: 0;
 
@@ -250,90 +522,149 @@
   cursor: pointer;
 }
 
+
 /* =========================================================
    ERROR
    ========================================================= */
 
 .advisor-error {
-  margin-top: 12px;
+  margin-top: 16px;
 
-  padding: 9px 12px;
+  padding: 13px 15px;
 
-  border-radius: 10px;
+  border: 1px solid rgba(210, 80, 80, 0.15);
 
-  background: #fff1f1;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff5f5,
+      #fffafa
+    );
 
   color: #c33c3c;
 
-  font-size: 10px;
+  font-size: 12px;
 
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
+
 /* =========================================================
-   SUBMIT
+   SUBMIT BUTTON
    ========================================================= */
 
 .advisor-submit {
   width: 100%;
 
-  height: 42px;
+  min-height: 54px;
 
-  margin-top: 16px;
+  margin-top: 22px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  gap: 7px;
+  gap: 9px;
 
   border: 0;
 
-  border-radius: 22px;
+  border-radius: 999px;
 
-  background: linear-gradient(
-    90deg,
-    #073e83 0%,
-    #0b79a5 45%,
-    #18b8bd 100%
-  );
+  background:
+    linear-gradient(
+      100deg,
+      #073e83 0%,
+      #09659a 42%,
+      #18b8bd 100%
+    );
 
   color: #ffffff;
 
   font-family: inherit;
 
-  font-size: 11px;
+  font-size: 15px;
 
-  font-weight: 700;
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
 
   cursor: pointer;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    opacity 0.2s ease;
-}
+  position: relative;
 
-.advisor-submit:hover:not(:disabled) {
-  transform: translateY(-1px);
+  overflow: hidden;
 
   box-shadow:
-    0 7px 18px rgba(5, 80, 130, 0.18);
+    0 12px 28px rgba(7, 62, 131, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
 }
 
+
+/* Shine effect */
+
+.advisor-submit::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.24),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.65s ease;
+}
+
+
+.advisor-submit:hover:not(:disabled)::before {
+  left: 130%;
+}
+
+
+.advisor-submit:hover:not(:disabled) {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 35px rgba(7, 62, 131, 0.28);
+}
+
+
+.advisor-submit:active:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+
 .advisor-submit:disabled {
-  opacity: 0.7;
+  opacity: 0.65;
 
   cursor: wait;
 }
+
 
 /* =========================================================
    SUCCESS
    ========================================================= */
 
 .advisor-success {
-  min-height: 280px;
+  min-height: 360px;
 
   display: flex;
 
@@ -345,195 +676,579 @@
   text-align: center;
 }
 
+
+/* =========================================================
+   SUCCESS ICON
+   ========================================================= */
+
 .advisor-success-icon {
-  width: 68px;
-  height: 68px;
+  width: 82px;
+  height: 82px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 
   border-radius: 50%;
 
-  background: #e6f8f7;
+  background:
+    linear-gradient(
+      135deg,
+      #e3f9f8,
+      #d8f5f5
+    );
 
   color: #0ca5ac;
+
+  box-shadow:
+    0 12px 30px rgba(12, 165, 172, 0.12);
+
+  animation: advisorSuccessPulse 2.5s ease-in-out infinite;
 }
 
+
+@keyframes advisorSuccessPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+
+/* =========================================================
+   SUCCESS TITLE
+   ========================================================= */
+
 .advisor-success h2 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 
   color: #153d61;
 
-  font-size: 21px;
+  font-size: 28px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
 }
 
-.advisor-success p {
-  max-width: 350px;
 
-  margin: 0 0 22px;
+/* =========================================================
+   SUCCESS DESCRIPTION
+   ========================================================= */
+
+.advisor-success p {
+  max-width: 500px;
+
+  margin: 0 0 25px;
 
   color: #71899d;
 
-  font-size: 12px;
+  font-size: 15px;
 
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.advisor-success-button {
-  min-height: 38px;
 
-  padding: 0 20px;
+/* =========================================================
+   SUCCESS BUTTON
+   ========================================================= */
+
+.advisor-success-button {
+  min-height: 46px;
+
+  padding: 0 26px;
 
   border: 0;
 
-  border-radius: 20px;
+  border-radius: 999px;
 
-  background: #0b4d92;
+  background:
+    linear-gradient(
+      100deg,
+      #073e83,
+      #18b8bd
+    );
 
   color: #ffffff;
 
   font-family: inherit;
 
-  font-size: 11px;
+  font-size: 13px;
 
-  font-weight: 700;
+  font-weight: 800;
 
   cursor: pointer;
+
+  box-shadow:
+    0 10px 24px rgba(7, 62, 131, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+
+.advisor-success-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(7, 62, 131, 0.25);
+}
+
 
 /* =========================================================
    DISCLAIMER
    ========================================================= */
 
 .advisor-disclaimer {
-  max-width: 720px;
+  max-width: 820px;
 
-  margin: 25px auto 0;
+  margin: 35px auto 0;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
 
   color: #718ba1;
 
-  font-size: 8px;
+  font-size: 11px;
 
-  line-height: 1.6;
+  line-height: 1.7;
 
   text-align: center;
 }
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .advisor-hero-inner {
+    max-width: 1280px;
+
+    padding-top: 105px;
+    padding-bottom: 95px;
+  }
+
+  .advisor-form-section {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .advisor-form-card {
+    max-width: 820px;
+
+    padding: 48px;
+  }
+
+  .advisor-form-row {
+    gap: 25px;
+  }
+}
+
 
 /* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
+
   .advisor-hero-inner {
-    padding: 65px 30px 60px;
+    padding: 75px 32px 70px;
   }
 
   .advisor-hero h1 {
-    font-size: 40px;
+    font-size: 46px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .advisor-hero p {
+    font-size: 16px;
   }
 
   .advisor-form-section {
-    padding-top: 65px;
+    padding:
+      70px
+      22px
+      75px;
+  }
+
+  .advisor-form-card {
+    max-width: 700px;
+
+    padding: 34px;
+
+    border-radius: 26px;
+  }
+
+  .advisor-field input,
+  .advisor-field select {
+    min-height: 48px;
+
+    font-size: 14px;
   }
 }
+
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 600px) {
+
   .advisor-hero-inner {
-    padding: 55px 20px 50px;
+    padding:
+      58px
+      20px
+      55px;
   }
+
+
+  /* Badge */
 
   .advisor-badge {
-    height: 25px;
+    min-height: 29px;
 
-    padding: 0 12px;
+    padding: 0 14px;
 
-    font-size: 7px;
+    font-size: 9px;
+
+    letter-spacing: 1.6px;
   }
+
+
+  /* Title */
 
   .advisor-hero h1 {
-    margin-top: 20px;
+    margin-top: 21px;
 
-    font-size: 34px;
+    font-size: 36px;
 
-    letter-spacing: -0.8px;
+    line-height: 1.08;
+
+    letter-spacing: -1px;
   }
+
+
+  .advisor-hero h1::after {
+    width: 60px;
+
+    height: 4px;
+
+    margin-top: 16px;
+  }
+
+
+  /* Description */
 
   .advisor-hero p {
-    font-size: 12px;
+    font-size: 14px;
+
+    line-height: 1.7;
   }
+
+
+  /* Form section */
 
   .advisor-form-section {
-    padding: 45px 14px 50px;
+    padding:
+      45px
+      14px
+      55px;
   }
+
+
+  /* Form card */
 
   .advisor-form-card {
-    padding: 20px;
+    max-width: 100%;
 
-    border-radius: 19px;
+    padding: 24px 19px;
+
+    border-radius: 23px;
+
+    box-shadow:
+      0 18px 45px rgba(20, 68, 105, 0.09);
   }
+
+
+  .advisor-form-card:hover {
+    transform: none;
+  }
+
+
+  /* Rows become single column */
 
   .advisor-form-row {
     grid-template-columns: 1fr;
 
-    gap: 13px;
+    gap: 18px;
 
-    margin-bottom: 13px;
+    margin-bottom: 18px;
   }
+
+
+  /* Labels */
 
   .advisor-field label {
-    font-size: 7px;
+    margin-bottom: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.8px;
   }
+
+
+  /* Inputs */
 
   .advisor-field input,
   .advisor-field select {
-    height: 39px;
+    min-height: 49px;
+
+    padding: 0 15px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+  }
+
+
+  /* Requirement */
+
+  .advisor-requirement {
+    margin-bottom: 20px;
+  }
+
+
+  /* Consent */
+
+  .advisor-consent {
+    gap: 9px;
+
+    padding: 12px;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+  }
+
+
+  .advisor-consent input {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  /* Error */
+
+  .advisor-error {
+    padding: 11px 13px;
+
+    font-size: 11px;
+  }
+
+
+  /* Submit */
+
+  .advisor-submit {
+    min-height: 51px;
+
+    margin-top: 19px;
+
+    font-size: 14px;
+  }
+
+
+  /* Success */
+
+  .advisor-success {
+    min-height: 300px;
+  }
+
+
+  .advisor-success-icon {
+    width: 72px;
+    height: 72px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .advisor-success h2 {
+    font-size: 23px;
+  }
+
+
+  .advisor-success p {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .advisor-success-button {
+    min-height: 43px;
+
+    padding: 0 22px;
 
     font-size: 12px;
   }
 
-  .advisor-consent {
+
+  /* Disclaimer */
+
+  .advisor-disclaimer {
+    margin-top: 25px;
+
+    padding: 0 10px;
+
     font-size: 9px;
-  }
 
-  .advisor-submit {
-    height: 42px;
-
-    font-size: 11px;
+    line-height: 1.65;
   }
 }
+
 
 /* =========================================================
    SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 380px) {
+
+  .advisor-hero-inner {
+    padding:
+      48px
+      16px
+      45px;
+  }
+
+
+  .advisor-badge {
+    min-height: 27px;
+
+    padding: 0 12px;
+
+    font-size: 8px;
+  }
+
+
   .advisor-hero h1 {
-    font-size: 30px;
+    font-size: 31px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .advisor-hero p {
+    font-size: 13px;
+  }
+
+
+  .advisor-form-section {
+    padding:
+      35px
+      11px
+      45px;
+  }
+
+
+  .advisor-form-card {
+    padding: 20px 15px;
+
+    border-radius: 20px;
+  }
+
+
+  .advisor-field label {
+    font-size: 9px;
+  }
+
+
+  .advisor-field input,
+  .advisor-field select {
+    min-height: 47px;
+
+    font-size: 13px;
+  }
+
+
+  .advisor-consent {
+    font-size: 10px;
+  }
+
+
+  .advisor-submit {
+    min-height: 49px;
+
+    font-size: 13px;
+  }
+
+
+  .advisor-success h2 {
+    font-size: 21px;
+  }
+
+
+  .advisor-success p {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+  .advisor-hero h1 {
+    font-size: 28px;
   }
 
   .advisor-form-card {
-    padding: 16px;
+    padding: 18px 13px;
   }
 
-  .advisor-hero p {
-    font-size: 11px;
+  .advisor-field input,
+  .advisor-field select {
+    font-size: 12px;
+  }
+
+  .advisor-submit {
+    font-size: 12px;
   }
 }
+
 
 /* =========================================================
    REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-  .advisor-submit {
+
+  .advisor-form-card,
+  .advisor-field input,
+  .advisor-field select,
+  .advisor-submit,
+  .advisor-success-button {
     transition: none;
+  }
+
+  .advisor-success-icon {
+    animation: none;
+  }
+
+  .advisor-submit::before {
+    display: none;
   }
 }
