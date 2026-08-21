@@ -1,86 +1,346 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import {
+  Activity,
+  CircleHelp,
+} from 'lucide-react';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const handleNavigation = () => {
+    scrollToTop();
+  };
+
   return (
-    <footer className="site-footer">
-      <div className="container footer-grid">
-        {/* Column 1: Brand & Intro */}
-        <div className="footer-col brand-col">
-          <Link to="/" className="footer-logo">
-            <span className="logo-discharge">Discharge</span>
-            <span className="logo-easy">Easy</span>
-          </Link>
-          <p className="brand-description">
-            Healthcare support. Insurance guidance.<br />
-            Peace of mind.
-          </p>
-          <p className="brand-tagline">Real people. Real assistance.</p>
-        </div>
+    <>
+      <footer className="site-footer">
+        <div className="container footer-container">
 
-        {/* Column 2: Quick Links */}
-        <div className="footer-col">
-          <h3 className="footer-col-title">Quick Links</h3>
-          <ul className="footer-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/claim-assistance">Claim Assistance</Link></li>
-            <li><Link to="/how-it-works">How It Works</Link></li>
-            <li><Link to="/about-us">About Us</Link></li>
-            <li><Link to="/why-us">Why Us</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </div>
+          {/* =========================
+              TOP FOOTER
+          ========================== */}
+          <div className="footer-grid">
 
-        {/* Column 3: Services */}
-        <div className="footer-col">
-          <h3 className="footer-col-title">Services</h3>
-          <ul className="footer-links">
-            <li><Link to="/health-insurance">Health Insurance</Link></li>
-            <li><Link to="/term-insurance">Term Insurance</Link></li>
-            <li><Link to="/claim-assistance">Claim Assistance</Link></li>
-            <li><Link to="/how-it-works">Hospital Assistance</Link></li>
-          </ul>
-        </div>
+            {/* =========================
+                BRAND COLUMN
+            ========================== */}
+            <div className="footer-col brand-col">
+              <Link
+                to="/"
+                className="footer-logo"
+                onClick={handleNavigation}
+                aria-label="DischargeEasy Home"
+              >
+                <span className="footer-logo-icon">
+                  <Activity size={20} strokeWidth={2.5} />
+                </span>
 
-        {/* Column 4: Contact */}
-        <div className="footer-col contact-col">
-          <h3 className="footer-col-title">Contact</h3>
-          <ul className="contact-info-list">
-            <li>
-              <Phone size={16} className="contact-icon" />
-              <span>+91 40 6823 4567</span>
-            </li>
-            <li>
-              <Mail size={16} className="contact-icon" />
-              <span>support@dischargeeasy.com</span>
-            </li>
-            <li>
-              <MapPin size={16} className="contact-icon" />
-              <span>Hyderabad, India</span>
-            </li>
-          </ul>
-          <Link to="/contact" className="footer-cta-link">
-            <span>Get Assistance</span>
-            <ArrowRight size={14} />
-          </Link>
-        </div>
-      </div>
+                <span className="footer-logo-text">
+                  <span className="logo-discharge">Discharge</span>
+                  <span className="logo-easy">Easy</span>
+                </span>
+              </Link>
 
-      <div className="footer-bottom">
-        <div className="container footer-bottom-container">
-          <p className="copyright">© 2026 DischargeEasy. All Rights Reserved.</p>
-          <div className="footer-bottom-links">
-            <Link to="/contact">Privacy Policy</Link>
-            <span className="divider">|</span>
-            <Link to="/contact">Terms & Conditions</Link>
-            <span className="divider">|</span>
-            <Link to="/contact">Insurance Disclaimer</Link>
+              <p className="brand-description">
+                Healthcare support. Insurance guidance.
+                <br />
+                Peace of mind.
+              </p>
+
+              <p className="brand-tagline">
+                You take care of your loved ones. We
+                <br />
+                take care of the insurance.
+              </p>
+            </div>
+
+            {/* =========================
+                COMPANY
+            ========================== */}
+            <div className="footer-col">
+              <h3 className="footer-col-title">
+                Company
+              </h3>
+
+              <ul className="footer-links">
+                <li>
+                  <Link to="/" onClick={handleNavigation}>
+                    Home
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/how-it-works"
+                    onClick={handleNavigation}
+                  >
+                    How It Works
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/why-us"
+                    onClick={handleNavigation}
+                  >
+                    Why Us
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/about-us"
+                    onClick={handleNavigation}
+                  >
+                    About Us
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/contact"
+                    onClick={handleNavigation}
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* =========================
+                SERVICES
+            ========================== */}
+            <div className="footer-col">
+              <h3 className="footer-col-title">
+                Services
+              </h3>
+
+              <ul className="footer-links">
+                <li>
+                  <Link
+                    to="/health-insurance"
+                    onClick={handleNavigation}
+                  >
+                    Health Insurance
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/term-insurance"
+                    onClick={handleNavigation}
+                  >
+                    Term Insurance
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/claim-assistance"
+                    onClick={handleNavigation}
+                  >
+                    Claim Assistance
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/reimbursement-assistance"
+                    onClick={handleNavigation}
+                  >
+                    Reimbursement Assistance
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/hospital-assistance"
+                    onClick={handleNavigation}
+                  >
+                    Hospital Assistance
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* =========================
+                SUPPORT
+            ========================== */}
+            <div className="footer-col">
+              <h3 className="footer-col-title">
+                Support
+              </h3>
+
+              <ul className="footer-links">
+                <li>
+                  <Link
+                    to="/contact"
+                    onClick={handleNavigation}
+                  >
+                    Get Assistance
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/claim-assistance"
+                    onClick={handleNavigation}
+                  >
+                    Request Claim Assistance
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/reimbursement-assistance"
+                    onClick={handleNavigation}
+                  >
+                    Request Reimbursement
+                    <br />
+                    Assistance
+                  </Link>
+                </li>
+
+<li>
+  <Link
+    to="/talk-to-advisor"
+    onClick={handleNavigation}
+  >
+    Talk To An Advisor
+  </Link>
+</li>
+
+                <li>
+                  <Link
+                    to="/faq"
+                    onClick={handleNavigation}
+                  >
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* =========================
+                LEGAL
+            ========================== */}
+            <div className="footer-col">
+              <h3 className="footer-col-title">
+                Legal
+              </h3>
+
+              <ul className="footer-links">
+                <li>
+                  <Link
+                    to="/privacy-policy"
+                    onClick={handleNavigation}
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/terms-and-conditions"
+                    onClick={handleNavigation}
+                  >
+                    Terms &amp; Conditions
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    to="/insurance-disclaimer"
+                    onClick={handleNavigation}
+                  >
+                    Insurance Disclaimer
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          {/* =========================
+              DISCLAIMER
+          ========================== */}
+          <div className="footer-disclaimer">
+            <p>
+              DischargeEasy provides insurance assistance, guidance and
+              coordination. Claim eligibility, admissibility,
+              reimbursement and settlement are subject to the applicable
+              insurance policy terms, conditions and insurer/TPA processes.
+            </p>
+          </div>
+
+          {/* =========================
+              DIVIDER
+          ========================== */}
+          <div className="footer-divider" />
+
+          {/* =========================
+              FOOTER BOTTOM
+          ========================== */}
+          <div className="footer-bottom">
+
+            <p className="copyright">
+              © 2026 DischargeEasy. All Rights Reserved.
+            </p>
+
+            <p className="development-partner">
+              Development Partner:
+              <strong>
+                CeeWell Technologies Pvt. Ltd.
+              </strong>
+
+              {/* Website Design &amp; Development */}
+            </p>
+
+            <div className="footer-bottom-links">
+              <Link
+                to="/privacy-policy"
+                onClick={handleNavigation}
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                to="/terms-and-conditions"
+                onClick={handleNavigation}
+              >
+                Terms &amp; Conditions
+              </Link>
+            </div>
+
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+      {/* =========================
+          FLOATING HELP BUTTON
+      ========================== */}
+      <Link
+        to="/contact"
+        className="footer-help-button"
+        onClick={handleNavigation}
+        aria-label="Need Help?"
+      >
+        <span className="help-icon">
+          <CircleHelp size={19} strokeWidth={2.4} />
+        </span>
+
+        <span className="help-text">
+          Need Help?
+        </span>
+      </Link>
+    </>
   );
 };
 

@@ -1,0 +1,425 @@
+/* =========================================================
+   INSURANCE DISCLAIMER
+   ========================================================= */
+
+.disclaimer-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #173b61;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.disclaimer-hero {
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(55, 208, 203, 0.20),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f5fbfd 0%,
+      #eafafa 100%
+    );
+}
+
+.disclaimer-hero-inner {
+  width: 100%;
+  max-width: 1120px;
+
+  margin: 0 auto;
+
+  padding: 68px 35px 60px;
+
+  box-sizing: border-box;
+}
+
+.disclaimer-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  height: 28px;
+
+  padding: 0 15px;
+
+  border: 1px solid #9ddfdf;
+
+  border-radius: 16px;
+
+  color: #07508d;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.disclaimer-hero h1 {
+  margin: 21px 0 13px;
+
+  color: #173957;
+
+  font-size: 43px;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.4px;
+
+  font-weight: 750;
+}
+
+.disclaimer-hero p {
+  max-width: 680px;
+
+  margin: 0;
+
+  color: #63819a;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.disclaimer-updated {
+  display: block;
+
+  margin-top: 17px;
+
+  color: #718ba0;
+
+  font-size: 9px;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.disclaimer-content {
+  width: 100%;
+
+  padding: 55px 20px 70px;
+
+  box-sizing: border-box;
+}
+
+.disclaimer-content-inner {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   IMPORTANT CARD
+   ========================================================= */
+
+.disclaimer-important {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  padding: 23px 25px;
+
+  margin-bottom: 38px;
+
+  border: 1px solid #9ddfdf;
+
+  border-radius: 20px;
+
+  background: #eafafa;
+
+  box-sizing: border-box;
+}
+
+.disclaimer-important-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b75a0;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+.disclaimer-important h2 {
+  margin: 0 0 6px;
+
+  color: #173f62;
+
+  font-size: 17px;
+}
+
+.disclaimer-important p {
+  margin: 0;
+
+  color: #55748c;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.disclaimer-section {
+  padding-bottom: 28px;
+
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #e2ebf0;
+}
+
+.disclaimer-section h2 {
+  margin: 0 0 13px;
+
+  color: #173d60;
+
+  font-size: 18px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+.disclaimer-section p {
+  margin: 0 0 11px;
+
+  color: #607b92;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.disclaimer-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.disclaimer-contact {
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background: #f1f9fe;
+
+  text-align: center;
+}
+
+.disclaimer-contact h2 {
+  margin: 0 0 9px;
+
+  color: #173d60;
+
+  font-size: 20px;
+}
+
+.disclaimer-contact p {
+  max-width: 570px;
+
+  margin: 0 auto 18px;
+
+  color: #6b8599;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+.disclaimer-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 22px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #073e83,
+    #18b8bd
+  );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .disclaimer-hero-inner {
+    padding: 60px 30px 55px;
+  }
+
+  .disclaimer-hero h1 {
+    font-size: 39px;
+  }
+
+  .disclaimer-content {
+    padding-top: 45px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .disclaimer-hero-inner {
+    padding: 52px 20px 45px;
+  }
+
+  .disclaimer-badge {
+    height: 25px;
+
+    padding: 0 12px;
+
+    font-size: 7px;
+  }
+
+  .disclaimer-hero h1 {
+    margin-top: 19px;
+
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .disclaimer-hero p {
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+  .disclaimer-updated {
+    font-size: 8px;
+  }
+
+  .disclaimer-content {
+    padding: 38px 15px 50px;
+  }
+
+  .disclaimer-important {
+    gap: 12px;
+
+    padding: 19px;
+
+    margin-bottom: 30px;
+
+    border-radius: 17px;
+  }
+
+  .disclaimer-important-icon {
+    width: 29px;
+    height: 29px;
+
+    font-size: 14px;
+  }
+
+  .disclaimer-important h2 {
+    font-size: 16px;
+  }
+
+  .disclaimer-important p {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+  .disclaimer-section {
+    padding-bottom: 22px;
+
+    margin-bottom: 22px;
+  }
+
+  .disclaimer-section h2 {
+    font-size: 16px;
+  }
+
+  .disclaimer-section p {
+    font-size: 11px;
+
+    line-height: 1.75;
+  }
+
+  .disclaimer-contact {
+    padding: 22px 18px;
+
+    border-radius: 17px;
+  }
+
+  .disclaimer-contact h2 {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .disclaimer-hero h1 {
+    font-size: 30px;
+  }
+
+  .disclaimer-hero p {
+    font-size: 11px;
+  }
+
+  .disclaimer-important {
+    padding: 16px;
+  }
+
+  .disclaimer-section h2 {
+    font-size: 15px;
+  }
+
+  .disclaimer-section p {
+    font-size: 10px;
+  }
+
+  .disclaimer-contact h2 {
+    font-size: 17px;
+  }
+}
